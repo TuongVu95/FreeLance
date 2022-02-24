@@ -1,0 +1,57 @@
+$gutters:(
+    xl: 8,
+    lg: 8,
+    md: 6,
+    sm: 4,
+    xs: 2   ,
+    xxs: 2
+);
+.btn-group {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @each $key, $value in $gutters{
+        &--gutters-#{$key} {
+            margin: 0 -#{$value}px;
+            .btn-#{$key} {
+                margin: 0 #{$value}px;
+            }
+        }
+    }
+    &-no-gutters > *{
+       &:not(:last-child) {
+            box-shadow: inset -1px 0px 0px #E4EAF1;
+        }
+       &:not(:last-child) {
+            &.btn-outline-gray{
+                box-shadow: inset -1px 0px 0px #D8DFE8;
+            }
+        }
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+            &.btn-outline-gray{
+               border-right: 0;
+               border-left: 0;
+            }
+        }
+        &:first-child{
+            border-radius: 12px 0 0 12px;
+            &.btn-outline-gray{
+                border-right: 0;
+             }
+            &.btn-rounded{
+                border-radius: 100px 0 0 100px;
+            }
+        }
+        &:last-child{
+            border-radius: 0 12px 12px 0;
+            &.btn-rounded{
+                border-radius: 0 100px 100px 0;
+            }
+            &.btn-outline-gray{
+                border-left: 0;
+             }
+        }
+
+    }
+}

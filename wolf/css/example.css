@@ -1,0 +1,135 @@
+html:not(iframe html) {
+    font-size: 62.5%;
+}
+
+.lc__cate{
+      /* max-width: 756px; */
+      margin: auto;
+}
+iframe{
+  /* max-width: 756px; */
+    width: 100%;
+    height: 100vh;
+    border: none;
+    overflow-y: scroll;
+  margin: auto;
+}
+iframe html{
+  overflow: scroll;
+  /* height: 1000px; */
+}
+.head-tit{
+  /* padding: 0.5rem; */
+}
+.demo{
+
+}
+.grid {
+    display: flex;
+    zoom: 1;
+    padding: 0 0 2rem 2rem;
+
+}
+.grid:before,
+.grid:after {
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+.grid--col {
+    float: left;
+
+}
+.grid__nav {
+    position: sticky;
+    top: 1rem;
+    width: 10%;
+    background: inherit;
+}
+.grid__nav ul {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+.grid__nav a {
+    color: #718198;
+    display: block;
+    padding: .2rem 0;
+}
+.grid__nav li {
+    position: relative;
+}
+.grid__nav a.active,
+.grid__nav a:active,
+.grid__nav a:hover {
+  color: #000;
+  font-weight: 500;
+}
+.grid__nav a.active:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  border-left: 0.2rem solid #666;
+  display: inline-block;
+  width: 0.8rem;
+  height: 100%;
+}
+.grid__nav a:hover {
+    color: #000;
+}
+.grid__content {
+  width: 90%;
+  background-color: #fff;
+  padding: 1rem 0 1rem 1rem;
+  /* border-radius: 1.2rem; */
+  /* box-shadow: 0 0 0 0.1rem #666; */
+}
+.demo-bg {
+    border-radius: 0.4rem;
+    height: 9.4rem;
+    line-height: 9.4rem !important;
+  }
+
+  .bg-warning-100 {
+    box-shadow: 0 0 0 0.1rem #FDE68A;
+  }
+
+  .bg-primary-100 {
+    box-shadow: 0 0 0 0.1rem #AABCEB
+  }
+
+  .no-gutters>*>* {
+    border-radius: 0;
+  }
+
+  .cs-container {
+    max-width: 340px;
+    padding: 0;
+  }
+
+  .cs-container>* {
+    padding: inherit;
+  }
+  html:-webkit-scrollbar-track,
+  body:-webkit-scrollbar-track,
+  iframe:-webkit-scrollbar-track {
+  border-radius: 100px;
+  background-color: red; }
+
+html::-webkit-scrollbar,
+body:-webkit-scrollbar,
+iframe:-webkit-scrollbar   {
+  width: 2px;
+  border-radius: 100px;
+  background-color: #b6c0ce; }
+
+html::-webkit-scrollbar-thumb,
+body:-webkit-scrollbar-thumb,
+iframe:-webkit-scrollbar-thumb   {
+  border-radius: 100px;
+  background-color: #52637a; }
+.system__box{
+
+}

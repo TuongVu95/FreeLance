@@ -1,0 +1,34 @@
+.cart-check {
+  width: 246px;
+  max-width: 100%;
+  @include respond-to("xs") {
+    width: 600px;
+    max-width: 100%;
+  }
+  ul {
+    li {
+      @include flexBetween();
+      span {
+        @extend .fs-p-16;
+        @extend .f-w-400;
+        color: $gray-700;
+        @include respond-to("xs") {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      &:not(:last-child) {
+        @extend .m-b-8;
+      }
+      &:last-child {
+        span {
+          @extend .fs-p-16;
+          @extend .f-w-500;
+          &:not(:first-child) {
+            color: $primary-700;
+          }
+        }
+      }
+    }
+  }
+}

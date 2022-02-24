@@ -1,0 +1,193 @@
+$label-prop: (
+  "lg": (
+    margin-icon: 8px,
+    margin-bottom: 4px,
+    font-size: 20px,
+  ),
+  "md": (
+    margin-icon: 4px,
+    margin-bottom: 0px,
+    font-size: 16px,
+  ),
+  "sm": (
+    margin-icon: 4px,
+    margin-bottom: 0px,
+    font-size: 16px,
+  ),
+  "xs": (
+    margin-icon: 4px,
+    font-size: 14px,
+  ),
+);
+
+@mixin label-help-text($bool: false) {
+  @if $bool {
+    @each $size, $detail in $label-prop {
+      $margin-bottom: map-get($detail, "margin-bottom");
+      $font-size: map-get($detail, "font-size");
+      &.label-#{$size} {
+        .label-text {
+          margin-bottom: #{$margin-bottom};
+        }
+      }
+    }
+  }
+}
+@mixin label-icon($bool: false, $direction: null) {
+  @if $bool {
+    @each $size, $detail in $label-size {
+      $font-size: map-get($detail, "font-size");
+      $margin-icon: map-get($detail, "margin-icon");
+      &.label-#{$size} {
+        [class^="ic-"],
+        [class*=" ic-"] {
+          width: #{$font-size};
+          height: #{$font-size};
+          font-size: calc(#{$font-size} - #{$spacing + 1});
+        }
+      }
+    }
+  }
+}
+@mixin label-direction($direction: null) {
+  @each $size, $detail in $label-prop {
+    $margin-icon: map-get($detail, "margin-icon");
+    @if $direction == "right" {
+      &.label-#{$size} {
+        [class^="ic-"],
+        [class*=" ic-"] {
+          margin-left: #{$margin-icon};
+        }
+      }
+    } @else {
+      &.label-#{$size} {
+        [class^="ic-"],
+        [class*=" ic-"] {
+          margin-right: #{$margin-icon};
+        }
+      }
+    }
+  }
+}
+// label text
+.label {
+  color: $gray-700;
+  display: inline-flex;
+  $this: &;
+  &-fw-500 {
+    & .label-text {
+      @extend .f-w-500;
+    }
+  }
+  &-text {
+    @extend .fs-p-16;
+  }
+  &-help-text {
+    @extend .fs-p-14;
+    @extend .f-w-400;
+    color: $gray-500;
+  }
+  &-lg {
+    #{$this}-text {
+      @extend .fs-p-20;
+    }
+    #{$this}-help-text {
+      @extend .fs-ui-16;
+    }
+  }
+  &-md {
+    #{$this}-text {
+      @extend .fs-p-16;
+    }
+    #{$this}-help-text {
+      @extend .fs-p-14;
+    }
+  }
+  &-sm {
+    #{$this}-text {
+      @extend .fs-p-14;
+    }
+    #{$this}-help-text {
+      @extend .fs-p-13;
+    }
+  }
+  &-xs {
+    #{$this}-text {
+      @extend .fs-p-14;
+    }
+    #{$this}-help-text {
+      @extend .fs-ui-12;
+    }
+  }
+}
+// only label help text
+.label-is-help-text {
+  flex-direction: column;
+  @include label-help-text(true);
+}
+// only label icon
+.label-is-icon {
+  align-items: center;
+  [class^="ic-"],
+  [class*=" ic-"] {
+    background: $gray-500;
+    color: $white;
+  }
+}
+.label-icon-left {
+  @include label-direction("left");
+}
+.label-icon-right {
+  flex-direction: row-reverse;
+  @include label-direction("right");
+}
+
+$icon-prop: (
+  "lg": (
+    width: 20px,
+    size: 13px,
+    size-default: 20px,
+  ),
+  "md": (
+    width: 16px,
+    size: 10px,
+    size-default: 16px,
+  ),
+  "sm": (
+    width: 16px,
+    size: 10px,
+    size-default: 14px,
+  ),
+  "xs": (
+    width: 14px,
+    size: 9px,
+    size-default: 12px,
+  ),
+);
+.icon {
+  &-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  &-square {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@each $size, $detail in $icon-prop {
+  $font-size: map-get($detail, "size");
+  $font-default: map-get($detail, "size-default");
+  $width: map-get($detail, "width");
+  .icon-#{$size} {
+    font-size: #{$font-default};
+  }
+  .icon-#{$size}.icon-circle,
+  .icon-#{$size}.icon-square {
+    font-size: #{$font-size};
+    width: #{$width};
+    height: #{$width};
+  }
+}

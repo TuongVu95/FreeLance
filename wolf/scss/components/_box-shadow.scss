@@ -1,0 +1,168 @@
+$borders: (
+  "1": $gray-200,
+  "2": $gray-300,
+  "3": $gray-400,
+  "4": $gray-500,
+  "5": $gray-600,
+  "6": $gray-700,
+  "7": $gray-800,
+  "8": $gray-900,
+);
+$direction: (
+  "t": "0px 1px 0px",
+  "l": "1px 0px 0px",
+  "r": "-1px 0px 0px",
+  "b": "0px -1px 0px",
+);
+$direction-axis: (
+  "l-r": "0px 1px 0px",
+  "t-l": "1px 0px 0px",
+  "t-r": "-1px 0px 0px",
+  "b": "0px -1px 0px",
+);
+
+$drop-shadow: (
+  "100": "0px 1px 1px rgba(0, 0, 0, 0.15)",
+  "200": "0px 1px 4px rgba(10, 10, 10, 0.15)",
+  "300": "0px 2px 12px rgba(0, 0, 0, 0.15)",
+  "400": "0px 4px 20px rgba(0, 0, 0, 0.15)",
+  "500": "0px 8px 40px rgba(0, 0, 0, 0.5)",
+);
+$inner-shadow: (
+  "100": "inset 0px 2px 2px rgba(0, 0, 0, 0.15)",
+  "200": "inset 0px 2px 4px rgba(4, 4, 4, 0.15)",
+  "300": "inset 0px 2px 8px rgba(4, 4, 4, 0.15)",
+);
+
+@mixin border($className, $nameStyle) {
+  @each $params, $val in $borders {
+    #{$className + $params} {
+      #{$nameStyle}: 1px solid #{$val};
+    }
+  }
+}
+
+//box-shadow single
+@each $dir, $valDi in $direction {
+  @each $params, $valBo in $borders {
+    .box-#{$dir}-#{$params},
+    .shadow-#{$dir}-#{$params} {
+      box-shadow: inset #{$valDi $valBo};
+    }
+  }
+}
+
+@each $value, $prop in $drop-shadow {
+  .drop-s-#{$value} {
+    box-shadow: #{$prop};
+  }
+}
+@each $value, $prop in $inner-shadow {
+  .inner-s-#{$value} {
+    box-shadow: #{$prop};
+  }
+}
+
+//box-shadow axis
+@mixin boxaxis($className, $val1, $val2, $val3: 0, $three: false) {
+  @if $three {
+    @each $keys, $value in $borders {
+      #{$className + $keys} {
+        box-shadow: inset #{$val1 $value}, inset #{$val2 $value}, inset #{$val3 $value};
+      }
+    }
+  } @else {
+    @each $keys, $value in $borders {
+      #{$className + $keys} {
+        box-shadow: inset #{$val1 $value}, inset #{$val2 $value};
+      }
+    }
+  }
+}
+
+//border
+@include border(".boder-t-", "border-top");
+@include border(".boder-r-", "border-right");
+@include border(".boder-b-", "border-bottom");
+@include border(".boder-l-", "border-left");
+
+//box-shadow axis
+@include boxaxis(".shadow-t-l-", "1px 0px 0px", "0px 1px 0px");
+@include boxaxis(".shadow-l-r-", "-1px 0px 0px", "1px 0px 0px");
+@include boxaxis(".shadow-t-r-", "-1px 0px 0px", "0px 1px 0px");
+@include boxaxis(".shadow-t-b-", "0px 1px 0px", "0px -1px 0px");
+@include boxaxis(".shadow-t-l-", "1px 0px 0px", "0px 1px 0px");
+@include boxaxis(".shadow-l-r-", "-1px 0px 0px", "1px 0px 0px");
+@include boxaxis(".shadow-t-r-", "-1px 0px 0px", "0px 1px 0px");
+@include boxaxis(".shadow-t-b-", "0px 1px 0px", "0px -1px 0px");
+
+//axis three
+@include boxaxis(".shadow-l-t-r-", "1px 0px 0px", "0px 1px 0px", "-1px 0px 0px", true);
+@include boxaxis(".shadow-l-b-r-", "1px 0px 0px", "0px -1px 0px", "-1px 0px 0px", true);
+@include boxaxis(".shadow-l-t-r-", "0px 1px 0px", "0px -1px 0px", "-1px 0px 0px", true);
+
+.box-full {
+  box-shadow: 0 0 0 1px $gray-300;
+}
+
+.bo-full {
+  border: 1px dashed $gray-300;
+}
+.border-full {
+  border: 1px solid $gray-300;
+}
+.radius-0 {
+  border-radius: 0px !important;
+}
+.radius-12 {
+  border-radius: 12px !important;
+}
+.radius-6 {
+  border-radius: $border-radius-md !important;
+}
+.radius-8 {
+  border-radius: $border-radius-lg !important;
+}
+.lc-line {
+  height: 1px;
+  width: 100%;
+  background-color: $gray-300;
+}
+.shadown-none-desk {
+  box-shadow: none !important;
+}
+.custom-underline {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+
+    width: 100%;
+    border-bottom: 1px solid $gray-700;
+  }
+}
+.shadow-b-200 {
+  @extend .box-b-2;
+}
+@include respond-to("md") {
+  .radius-8-mb {
+    border-radius: $border-radius-lg !important;
+  }
+  .box-shad-none,
+  .box-shadow-none {
+    box-shadow: none !important;
+  }
+  .border-none {
+    border: none;
+  }
+  .radius-none {
+    border-radius: 0 !important;
+  }
+  .radius-6-mb {
+    border-radius: $border-radius-md !important;
+  }
+  .radius-8-mb {
+    border-radius: $border-radius-lg !important;
+  }
+}

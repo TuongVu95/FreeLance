@@ -1,0 +1,276 @@
+// $theme-colors-alert: (
+// 	"gray": $gray-100,
+// 	"success": $success-100,
+// 	"info": $info-100,
+// 	"warning": $warning-100,
+// 	"danger": $danger-100,
+// );
+$theme-colors-alert-icon: (
+	"gray": $gray,
+	"success": $success,
+	"info": $info,
+	"warning": $warning,
+	"danger": $danger,
+);
+$theme-colors-alert-border: (
+	"gray": $gray-200,
+	"success": $success-200,
+	"info": $info-200,
+	"warning": $warning-200,
+	"danger": $danger-200,
+);
+$theme-colors-alert-text: (
+	"gray": (
+		title: $gray-800,
+		des: $gray-700,
+		border: $gray-200,
+		background: $gray-100,
+		border-bottom: $gray-200,
+	),
+	"success": (
+		title: $success-800,
+		des: $success-700,
+		border: $success-200,
+		background: $success-100,
+		border-bottom: $success-200,
+	),
+	"info": (
+		title: $info-800,
+		des: $info-700,
+		border: $info-200,
+		background: $info-100,
+		border-bottom: $info-200,
+	),
+	"warning": (
+		title: $warning-800,
+		des: $warning-700,
+		border: $warning-200,
+		background: $warning-100,
+		border-bottom: $warning-200,
+	),
+	"danger": (
+		title: $danger-800,
+		des: $danger-700,
+		border: $danger-200,
+		background: $danger-100,
+		border-bottom: $danger-200,
+	),
+);
+$alert-size: (
+	lg: (
+		margin-icon: 8px,
+		ratio-icon: 20px,
+		font-icon: 10px,
+		font-size: 16px,
+		height: 36px,
+		padding: 16px,
+		font-head: 20px,
+	),
+	md: (
+		margin-icon: 8px,
+		ratio-icon: 16px,
+		font-icon: 10px,
+		font-size: 16px,
+		height: 32px,
+		padding: 8px,
+		font-head: 16px,
+	),
+	sm: (
+		margin-icon: 4px,
+		ratio-icon: 16px,
+		font-icon: 10px,
+		font-size: 14px,
+		height: 28px,
+		padding: 8px,
+		font-head: 14px,
+	),
+	xs: (
+		margin-icon: 4px,
+		ratio-icon: 14px,
+		font-icon: 8px,
+		font-size: 14px,
+		height: 24px,
+		padding: 6px,
+		font-head: 14px,
+	),
+) !default;
+
+%border-gray400 {
+	border: solid 1px $gray-400;
+}
+$alert-border-radius: $border-radius !default;
+$alert-border-width: $border-width !default;
+
+// Base styles
+//
+.alert {
+	$this: &;
+	display: inline-flex;
+	align-items: center;
+
+	& [class|="ic"] {
+		display: inline-block;
+		text-align: center;
+		border-radius: 25px;
+	}
+
+	span {
+		flex: 1;
+	}
+
+	@each $breakpoint, $value in $grid-breakpoints-mb {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints-mb);
+
+		@include media-breakpoint-down($breakpoint, $grid-breakpoints-mb) {
+			@each $color, $value in $alert-size {
+				$margin-icon: map-get($value, "margin-icon");
+				$ratio: map-get($value, "ratio-icon");
+				$font-icon: map-get($value, "font-icon");
+				$font-size: map-get($value, "font-size");
+				$padding: map-get($value, "padding");
+				$height: map-get($value, "height");
+				$head: map-get($value, "font-head");
+
+				&-#{$color}#{$infix} {
+					height: $height;
+					&#{$this}-des {
+						font-size: $font-size;
+					}
+					[class*="alert-ic"] {
+						width: $ratio;
+						height: $ratio;
+						line-height: $ratio;
+						font-size: #{$font-icon};
+						margin-right: #{$margin-icon};
+						color: $white;
+					}
+					&#{$this}-default {
+						padding-right: $padding;
+						padding-left: $padding;
+					}
+					#{$this}-head {
+						font-size: $head;
+					}
+				}
+			}
+		}
+	}
+	&-default {
+		border-radius: 8px;
+		#{$this}-close {
+			cursor: pointer;
+			font-weight: 600;
+		}
+	}
+	&-lg {
+		.alert-head {
+			span {
+				line-height: 28px;
+			}
+		}
+		.alert-description {
+			@extend .fs-p-16;
+		}
+	}
+	&-lg,
+	&-md,
+	&-sm {
+		.alert-head {
+			padding-bottom: 8px;
+		}
+	}
+	&-md,
+	&-sm,
+	&-xs {
+		.alert-description {
+			@extend .fs-p-14;
+		}
+	}
+	&-lg,
+	&-md {
+		#{$this}-close {
+			@extend .m-l-8;
+			font-size: 12px;
+		}
+		&#{$this}-full-text {
+			padding: 12px;
+		}
+	}
+	&-md {
+		.alert-head span {
+			line-height: 24px;
+		}
+	}
+	&-sm {
+		&#{$this}-full-text {
+			padding: 8px 12px;
+		}
+	}
+	&-xs {
+		&#{$this}-full-text {
+			padding: 6px 8px;
+			.alert-description {
+				padding-top: 2px;
+			}
+		}
+		.alert-head {
+			padding-bottom: 4px;
+		}
+	}
+	&-sm,
+	&-xs {
+		#{$this}-close {
+			@extend .m-l-4;
+		}
+		.alert-head span {
+			line-height: 20px;
+		}
+		#{$this}-close {
+			font-size: 10px;
+		}
+	}
+	&-full-text {
+		flex-direction: column;
+		align-items: start;
+		height: auto;
+		border-radius: 12px;
+		min-width: 376px;
+		.alert-head {
+			display: inline-flex;
+			align-items: center;
+			width: 100%;
+			> span {
+				font-weight: 500;
+			}
+		}
+		.alert-description {
+			padding-top: 8px;
+		}
+	}
+	@include respond-to("md") {
+		&-full-text {
+			min-width: auto;
+		}
+	}
+}
+@each $color, $value in $theme-colors-alert-text {
+	$title: map-get($value, "title");
+	$text: map-get($value, "des");
+	$border: map-get($value, "border");
+	$background: map-get($value, "background");
+	$border-bottom: map-get($value, "border-bottom");
+	.alert-#{$color} {
+		color: #{$text};
+		&.alert-default {
+			background: $background;
+			border: 1px solid $border;
+		}
+		.alert-head {
+			color: $title;
+			border-bottom: 1px solid $border-bottom;
+		}
+	}
+}
+.alert-outline-gray {
+	@extend %border-gray400;
+}

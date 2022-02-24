@@ -1,0 +1,112 @@
+.pagination {
+  display: flex;
+  list-style: none;
+  $this: &;
+  &-item {
+    &:last-child {
+      margin-right: 0;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    //state
+    &.active {
+      #{$this}-link {
+        background: $primary-500;
+        color: $white;
+        border-color: $primary-500;
+      }
+    }
+    &.disabled,
+    &:disabled {
+      #{$this}-link {
+        color: $gray-400;
+        pointer-events: none;
+      }
+    }
+  }
+  &-link {
+    width: 40px;
+    height: 40px;
+    @extend .fs-p-14;
+    @extend .f-w-500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $gray-700;
+    background: $white;
+    border-radius: 100px;
+    border: $border-default;
+    transition: $btn-transition;
+    @include respond-to("sm") {
+      width: 32px;
+      height: 32px;
+    }
+    @media(min-width: 992px){
+      &:hover {
+        background: $primary;
+        color: $white;
+        border-color: $primary;
+      }
+      &:active {
+        box-shadow: 0 0 0 0.1rem $primary-400;
+        color: $white;
+      }
+      &:focus {
+        border-color: $primary;
+        background: $primary-600;
+        color: $white;
+        outline: none;
+      }
+    }
+  }
+  &-default {
+    #{$this}-item {
+      #{$this}-link {
+        border-radius: 0;
+      }
+      &:not(:first-child):not(:last-child) {
+        #{$this}-link {
+          border-right: none;
+          border-left: none;
+          box-shadow: inset -1px 0px 0px $gray-200;
+        }
+      }
+      &:first-child {
+        #{$this}-link {
+          border-right: none;
+          border-top-left-radius: 100px;
+          border-bottom-left-radius: 100px;
+          box-shadow: inset -1px 0px 0px $gray-200;
+        }
+      }
+      &:last-child {
+        #{$this}-link {
+          border-left: none;
+          border-top-right-radius: 100px;
+          border-bottom-right-radius: 100px;
+        }
+      }
+    }
+    #{$this}-link {
+      &:active {
+        background: $primary-500;
+        box-shadow: none;
+      }
+    }
+  }
+  &-space {
+    #{$this}-item {
+      margin: 0 $spacing;
+    }
+  }
+  &-empty {
+    #{$this}-link {
+      border-color: transparent;
+      &:active {
+        background: $primary-600;
+        box-shadow: none;
+      }
+    }
+  }
+}

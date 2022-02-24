@@ -1,0 +1,39 @@
+$cursor-prop: (
+  "default": (
+    cursor: default,
+  ),
+  "pointer": (
+    cursor: pointer,
+  ),
+  "grabbing": (
+    cursor: grabbing,
+  ),
+  "zoom-out": (
+    cursor: zoom-out,
+  ),
+  "zoom-in": (
+    cursor: zoom-in,
+  ),
+  "unavailable": (
+    cursor: not-allowed,
+  ),
+  "text": (
+    cursor: text,
+  ),
+  "crosshair": (
+    cursor: crosshair,
+  ),
+  "progress": (
+    cursor: progress,
+  ),
+  "disable": (
+    cursor: disable,
+  ),
+);
+
+@each $style, $detail in $cursor-prop {
+  $cursor: map-get($detail, "cursor");
+  .cursor-#{$style} {
+    cursor: #{$cursor};
+  }
+}

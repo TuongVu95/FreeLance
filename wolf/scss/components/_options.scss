@@ -1,0 +1,207 @@
+.option {
+    display: inline-flex;
+    flex-direction: column;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid $gray-400;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    color: $gray-700;
+    cursor: pointer;
+
+    height: 100%;
+
+    $this: ".option";
+    background: linear-gradient(to top right, transparent 50%, $gray-400 0) top right/20px 20px no-repeat, $white;
+
+    strong{
+        font-weight: 500;
+    }
+
+    &-sm,
+    &-md {
+        &-desc {
+            background: linear-gradient(to top right, transparent 50%, $gray-400 0) top right/40px 40px no-repeat,
+                $white;
+        }
+    }
+    &-sm {
+        height: 28px;
+        line-height: 26px;
+        padding: 0 16px 0 12px;
+        font-size: 14px;
+    }
+    &-md {
+        height: 32px;
+        line-height: 30px;
+        padding: 0 20px 0 12px;
+    }
+    &-desc {
+        min-width: 316px;
+        #{$this}-title {
+            box-shadow: inset 0px -1px 0px $gray-200;
+            padding-bottom: 4px;
+        }
+    }
+    &-txt {
+        color: $gray-600;
+        word-break: break-word;
+    }
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        // z-index: 2;
+    }
+    &:after {
+        content: "\e9aa";
+        font-family: "icon-system" !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        color: $white;
+        font-size: 7px;
+        top: 2px;
+        right: 2px;
+    }
+    &-title {
+        color: $gray-700;
+        font-size: inherit;
+        // line-height: inherit;
+        .option-icon {
+            font-size: 16px;
+            margin-right: 4px;
+            color: $gray-500;
+        }
+    }
+
+    &-disable {
+        border: 1px solid $gray-300;
+        color: $gray-400;
+        pointer-events: none;
+        background: linear-gradient(to top right, transparent 50%, $gray-300 0) top right/20px 20px no-repeat, $white;
+        #{$this}-title,
+        #{$this}-txt {
+            color: inherit;
+            font-weight: normal;
+        }
+        .option-icon {
+            color: inherit;
+        }
+    }
+    &.active,
+    &.checked {
+        color: $primary-700;
+        border: 1px solid #1d48ba;
+        background: linear-gradient(to top right, transparent 50%, $primary-500 0) top right/20px 20px no-repeat, $white;
+        #{$this}-title {
+            color: $primary-700;
+            font-weight: 500;
+        }
+        .option-icon {
+            color: inherit;
+        }
+    }
+    &-sm,
+    &-md {
+        &-desc {
+            &.option-disable {
+                background: linear-gradient(to top right, transparent 50%, $gray-300 0) top right/40px 40px no-repeat,
+                    $white;
+            }
+        }
+    }
+    &-md {
+        &-desc {
+            &.active,
+            &.checked {
+                background: linear-gradient(to top right, transparent 50%, $primary-500 0) top right/40px 40px no-repeat,
+                    $white !important;
+            }
+        }
+    }
+    &-sm {
+        &-desc {
+            &.active,
+            &.checked {
+                background: linear-gradient(to top right, transparent 50%, $primary-500 0) top right/37.5px 37.5px no-repeat,
+                    $white !important;
+            }
+        }
+    }
+}
+.option-sm {
+    $this: ".option";
+    &-desc {
+        padding: 4px 12px 4px 8px;
+        background: linear-gradient(to top right, transparent 50%, $gray-400 0) top right/38px 38px no-repeat, $white;
+        &:before {
+            width: 40px;
+            height: 40px;
+        }
+        &:after {
+            font-size: 16px;
+            top: 4px;
+            right: 4px;
+        }
+        #{$this}-txt {
+            padding-top: 4px;
+        }
+    }
+}
+
+.option-md {
+    $this: ".option";
+    &-tit {
+        #{$this}-title {
+            font-size: 16px;
+        }
+    }
+    &-desc {
+        max-width: 340px;
+        padding: 8px 12px 12px;
+        border-radius: 12px;
+        background-size: 40px 40px;
+
+        &:before {
+            width: 40px;
+            height: 40px;
+            // border-top-right-radius: 12px;
+            // &:before{
+            //     border-top-right-radius: 12px !important;
+            // }
+        }
+        &:after {
+            font-size: 16px;
+            top: 4px;
+            right: 4px;
+        }
+
+        #{$this}-txt {
+            padding-top: 8px;
+        }
+    }
+    @include respond-to("md") {
+        &-desc {
+            max-width: 100%;
+            &:before {
+                // border-top-right-radius: 8px;
+                // &:before{
+                //     border-top-right-radius: 12px !important;
+                // }
+            }
+        }
+    }
+}
+.us__like.active {
+    color: #33b530;
+}

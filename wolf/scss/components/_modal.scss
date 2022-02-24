@@ -1,0 +1,246 @@
+.modal {
+	position: fixed;
+	z-index: 99999;
+	left: 0;
+	top: 0;
+
+	width: 100%;
+	height: 100%;
+
+	@include flexCenter();
+
+	background-color: $black-70;
+
+	opacity: 0;
+	visibility: hidden;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	$this: &;
+
+	&-wrapper {
+		outline: none;
+		width: 100%;
+		margin: auto;
+	}
+
+	&-box {
+		@extend .bg-white, .relative;
+		width: 100%;
+		pointer-events: auto;
+		background-clip: padding-box;
+		border-radius: 24px;
+
+		@extend .drop-s-500;
+	}
+
+	&-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		box-shadow: inset 0px -1px 0px $gray-200;
+	}
+	&-title {
+		display: flex;
+		align-items: center;
+		&-icon {
+			i {
+				@include flexCenter(inline-flex);
+				color: $white-100;
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+				background-color: $gray;
+				margin-right: 8px;
+			}
+			&.icon-right {
+				flex-direction: row-reverse;
+				i {
+					margin-right: 0;
+					margin-left: 8px;
+				}
+			}
+		}
+		&__desc {
+			@extend .fs-p-24, .f-w-500;
+			color: $gray-900;
+		}
+	}
+	&-close {
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		outline: none;
+		color: $gray;
+		@include flexCenter(inline-flex);
+		&:hover {
+			color: $gray-600;
+		}
+		.icon {
+			display: block;
+		}
+	}
+
+	&-body {
+		color: $gray-700;
+	}
+
+	&-shape {
+		@include flexCenter(inline-flex);
+		width: 64px;
+		height: 64px;
+		[class*="ic"] {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&-footer {
+		display: flex;
+		justify-content: center;
+		.link {
+			align-self: center;
+		}
+	}
+
+	&--is-visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	// size
+	&-lg {
+		#{$this}-wrapper {
+			max-width: 776px;
+		}
+
+		#{$this}-header {
+			padding: 10px 24px;
+			&#{$this}-no-title {
+				box-shadow: none;
+				justify-content: flex-end;
+				padding: 10px 24px 0;
+			}
+		}
+
+		#{$this}-body {
+			padding: 16px 24px 0;
+		}
+
+		#{$this}-footer {
+			padding: 24px 32px;
+		}
+	}
+	&-md {
+		#{$this}-wrapper {
+			max-width: 576px;
+		}
+		#{$this}-box {
+			border-radius: 20px;
+		}
+		#{$this}-body {
+			padding: 16px 20px 0;
+		}
+		#{$this}-header {
+			padding: 10px 20px;
+			&#{$this}-no-title {
+				box-shadow: none;
+				justify-content: flex-end;
+				padding: 10px 20px 0;
+			}
+		}
+		#{$this}-footer {
+			padding: 24px;
+		}
+	}
+	&-sm {
+		#{$this}-wrapper {
+			max-width: 376px;
+		}
+		#{$this}-box {
+			border-radius: 12px;
+		}
+		#{$this}-header {
+			padding: 8px 16px;
+			.icon-circle {
+				width: 24px;
+				height: 24px;
+				font-size: 15px;
+				margin-right: 8px;
+			}
+			&#{$this}-no-title {
+				box-shadow: none;
+				justify-content: flex-end;
+				padding: 12px 16px 0;
+			}
+		}
+		#{$this}-body {
+			padding: 16px;
+		}
+		#{$this}-title {
+			&-icon {
+				i {
+					width: 20px;
+					height: 20px;
+					font-size: 10px;
+				}
+			}
+			&__desc {
+				@extend .fs-p-16;
+			}
+		}
+		#{$this}-footer {
+			padding: 0 16px 16px;
+		}
+	}
+	// status bottom-sheet
+	&-bottom-sheet {
+		@include respond-to("md") {
+			#{$this}-wrapper {
+				margin: auto 0 0;
+			}
+			#{$this}-header {
+				padding: 12px 16px;
+				&#{$this}-no-title {
+					padding: 12px 16px 0;
+				}
+			}
+			#{$this}-box {
+				border-radius: 12px 12px 0px 0px;
+			}
+			#{$this}-title-icon {
+				[class^="ic-"] {
+					width: 20px;
+					height: 20px;
+					font-size: 10px;
+				}
+			}
+			#{$this}-title__desc {
+				@extend .fs-ui-md-18;
+				line-height: 100% !important;
+			}
+		}
+	}
+}
+
+// ANIMATION
+.modal[data-animation="on"] {
+	transition: opacity $transition-duration-xs $timing-ease-end, visibility $transition-duration-xs $timing-ease-start;
+	transition-delay: 0.1s;
+	.modal-wrapper {
+		transition-delay: 0s;
+		// will-change: transform;
+		transition: transform $transition-duration-xs $timing-ease-start;
+		transform: translate3d(0, 20%, 0);
+	}
+	&.modal--is-visible .modal-wrapper {
+		transition: opacity $transition-duration-xs $timing-ease-end, visibility $transition-duration-xs $timing-ease-end;
+		transition-delay: 0s;
+	}
+	&.modal--is-visible .modal-wrapper {
+		transition-delay: 0.3s;
+		transform: translate3d(0, 0, 0);
+		transition: transform $transition-duration-xs $timing-ease-end;
+	}
+}

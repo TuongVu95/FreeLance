@@ -1,0 +1,99 @@
+// file uploader
+.wrap-file-uploader {
+	display: inline-block;
+	vertical-align: top;
+	width: 290px;
+	.inner-file-uploader {
+		input {
+			width: 0;
+    		height: 0;
+			overflow: hidden;
+			opacity: 0;
+		}
+	}
+	.btn-file {
+        cursor: pointer;
+		display: inline-block;
+		
+	}
+	.note-file-upload {
+		@extend .fs-ui-16, .txt-gray;
+	}
+	.txt-status {
+		@extend .fs-p-16, .txt-gray-700;
+	}
+	&.uploader-sm {
+		.note-file-upload,
+		.txt-status {
+			@extend .fs-ui-14;
+		}
+	}
+	.status {
+		&-error {
+			padding-top: 2px;
+			& > :first-child {
+				color: $danger-500;
+			}
+		}
+		&-success {
+			padding-left: 0;
+			padding-right: 0;
+			.btn {
+				margin-top: -2px;
+			}
+		}
+		&.border {
+			border: 1px solid $gray-200;
+			background-color: $gray-100;
+			border-radius: 6px;
+			padding: 5px 10px;
+		}
+		.spinner {
+			width: 16px;
+			height: 16px;
+			border-width: 2px;
+		}
+	}
+
+	&.uploader-drap-drop {
+		.border-box {
+			@include border-radius(12px);
+			padding: 22px 0 20px;
+			border: 2px dashed $gray-300;
+			min-height: 205px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+
+			&:hover {
+				background-color: $gray-100;
+			}
+			&.loading {
+				height: 225px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				display: -webkit-box;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+			}
+
+			i {
+				font-size: 38px;
+				padding-bottom: 18px;
+			}
+		}
+		.wrap-btn-file {
+			.btn-file {
+				padding-bottom: 5px;
+				padding-top: 3px;
+			}
+			> * {
+				display: block;
+			}
+		}
+	}
+}

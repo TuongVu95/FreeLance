@@ -1,0 +1,112 @@
+$avatar: (
+    lg: (
+        size: 72px,
+        sizeName: 24px,
+        radius: 12px
+    ),
+    md: (
+        size: 48px,
+        sizeName: 20px,
+        radius: 8px
+    ),
+    sm: (
+        size: 28px,
+        sizeName: 13px,
+        radius: 4px
+    ),
+);
+
+.avatar {
+    display: flex;
+    align-items: center;
+    $this: &;
+    @each $key, $value in $avatar {
+        $size: map-get($value, "size");
+        $sizeName: map-get($value, "sizeName");
+        $radius: map-get($value, "radius");
+        &-#{$key} {
+            #{$this}-picture {
+                width: #{$size};
+                height: #{$size};
+                border-radius: $radius;
+                .name{
+                    font-size: $sizeName;
+                }
+            }
+        }
+    }
+    .badge{
+        cursor: auto;
+    }
+    &-time {
+        color: $gray;
+        margin-top: 4px;
+     }
+     &-name{
+        font-weight: 500;
+     }
+
+     &-qtv{
+        margin-top: 4px;
+     }
+    &-lg{
+        #{$this}-name {
+           font-size: 18px;
+           line-height: 18px;
+
+        }
+        #{$this}-time {
+           font-size: 16px;
+           line-height: 16px;
+        }
+    }
+    &-md.avatar-admin{
+        #{$this}-name span {
+            margin-left: 4px;
+        }
+    }
+    &-md,&-sm{
+        #{$this}-name {
+           font-size: 16px;
+        }
+        #{$this}-time {
+           font-size: 14px;
+            line-height: 14px;
+        }
+    }
+    &-rounded,&-circle {
+        #{$this}-picture {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $gray-400;
+        }
+        .name{
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
+    &-circle {
+        #{$this}-picture {
+            @extend .circle;
+        }
+    }
+    &-picture {
+        img {
+            border-radius: inherit;
+        }
+    }
+    &-info {
+        #{$this}-picture {
+            margin-right: 8px;
+        }
+    }
+    &-sm.avatar-admin{
+        #{$this}-info {
+            display: flex;
+        }
+        #{$this}-name span, #{$this}-time {
+            margin-left: 4px;
+        }
+    }
+}
