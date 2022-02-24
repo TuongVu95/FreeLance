@@ -1,0 +1,42 @@
+$spacing-slide-y: 24px;
+$spacing-slide-x: 32px;
+
+$spacing-para: 24px;
+
+.dapha-para {
+    color: $link-hover;
+}
+.para-heading-36 {
+    font-size: 36px;
+    line-height: 51px;
+}
+
+.dapha-line {
+    width: 360px;
+    height: 2px;
+    background-color: $white;
+    margin: $spacing-para 0;
+}
+
+.para-normal {
+    margin-bottom: $spacing-para;
+}
+
+.para-desc {
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.dapha-slide {
+    padding: 100px 0 95px;
+
+    background: url(../images/home-cate/bg-banner-home.jpg) no-repeat center;
+    background-size: cover;
+
+    .dapha-box {
+        background-color: $main-color;
+        padding: $spacing-slide-y $spacing-slide-x;
+
+        border-radius: 6px;
+    }
+}

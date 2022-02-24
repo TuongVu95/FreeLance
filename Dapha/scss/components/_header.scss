@@ -1,0 +1,57 @@
+
+$spacing-y: 24px;
+
+.dapha-header{
+    padding: $spacing-y 0;
+    @extend .bg-dapha;
+    &-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.dapha-header-nav{
+    &-item{
+        position: relative;
+
+        &.logo{
+            max-width: 85px;
+        }
+
+        &:not(:last-child){
+            margin-right: 24px;
+        }
+
+        &:not(.logo){
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                border-bottom: 2px solid $link-hover;
+                width: 0;
+
+                opacity: 0;
+                visibility: hidden;
+
+                transition:  $transition;
+                transform: scale(0);
+            }
+        }
+
+        @media(min-width: 992px){
+            &:hover,&:active,&:focus, &.active{
+                &::before{
+                    opacity: 1;
+                    visibility: visible;
+
+                    width: 100%;
+                    transform: scale(1);
+                }
+                > * {
+                    color: $link-hover;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

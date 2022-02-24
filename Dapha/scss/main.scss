@@ -1,0 +1,21 @@
+// @import 'abstracts/_function';
+@import "abstracts/_variables";
+@import "abstracts/_mixins";
+@import "abstracts/_fonts";
+@import "abstracts/_utilities";
+@import "abstracts/_spacing";
+
+//layout
+@import "layout/_reboot";
+
+//components
+@import "components/_container";
+@import "components/_core";
+
+@import "components/header";
+
+//pages
+@import "pages/_home";
+
+
+

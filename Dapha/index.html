@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- CSS file import -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Js file import -->
+    <script src="js/libs/jquery-3.1.0.min.js"></script>
+    <script src="js/libs/swiper.min.js"></script>
+
+</head>
+
+<body>
+    <header class="dapha-header">
+        <div class="container">
+            <div class="dapha-header-inner">
+                <ul class="dapha-header-nav">
+                    <li class="dapha-header-nav-item active">
+                        <a href="/index.html">
+                            TRANG CHỦ
+                        </a>
+                    </li>
+                    <li class="dapha-header-nav-item">
+                        <a href="/nha-may-san-xuat.html">
+                            NHÀ MÁY SẢN XUẤT
+                        </a>
+                    </li>
+                    <li class="dapha-header-nav-item">
+                        <a href="/nong-san.html">
+                            NÔNG SẢN
+                        </a>
+                    </li>
+                    <li class="dapha-header-nav-item logo">
+                        <a href="/index.html">
+                            <picture>
+                                <img src="images/logo.jpg" alt="DAPHA">
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="dapha-header-nav-item">
+                        <a href="/thuong-mai-tieu-dung.html">
+                            THƯƠNG MẠI TIÊU DÙNG
+                        </a>
+                    </li>
+                    <li class="dapha-header-nav-item">
+                        <a href="tin-tuc.html">
+                            TIN TỨC
+                        </a>
+                    </li>
+                    <li class="dapha-header-nav-item">
+                        <a href="/lien-he">
+                            LIÊN HỆ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="dapha-wrap">
+        <section class="dapha-section dapha-slide">
+            <div class="container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="dapha-box">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="slide-left">
+                                            <div class="dapha-para para-heading-36">
+                                                TÔN CHỈ <br>
+                                                “SỰ HÀI LÒNG CỦA KHÁCH HÀNG LÀ <br>
+                                                ĐIỀU MÀ CHÚNG TÔI LUÔN HƯỚNG ĐẾN”
+                                            </div>
+                                            <div class="dapha-line"></div>
+                                            <p class="para-normal txt-white">
+                                                Trong vài năm trở lại đây, với sự bùng nổ của công nghệ và máy móc, con người đã dễ dàng hơn trong việc sản xuất và thương mại các sản phẩm mà mình tạo ra. Để phát triển và nhanh chóng đuổi theo thời đại, Dapha đã hội nhập và xây dựng nhà máy sản xuất để định vị giá trị và thương hiệu riêng.
+                                            </p>
+                                            <div class="dapha-para para-desc">
+                                                “Tham gia sản xuất, gia tăng thành phẩm, mang lại lợi nhuận”
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="slide-right">
+                                            <picture>
+                                                <img src="images/swiper/slide1png.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="dapha-footer">
+
+    </footer>
+    <script src="js/fn_home.js"></script>
+   <br>  <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
