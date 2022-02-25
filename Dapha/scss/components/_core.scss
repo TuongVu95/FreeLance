@@ -79,6 +79,7 @@ picture{
     background: url(../images/swiper/carousel.png) no-repeat center;
     background-size: cover;
 
+
     position: relative;
     width: 12px;
     height: 21px;
@@ -93,5 +94,15 @@ picture{
   }
   &.swiper-button-prev{
     left: calc(((100vw - 1186px) / 2) - 20px);
+  }
+}
+.hover-scale{
+  img{
+    transition: $transition;
+  }
+  &:hover{
+    img{
+      transform: scale(1.03);
+    }
   }
 }

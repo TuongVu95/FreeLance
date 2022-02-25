@@ -1,6 +1,59 @@
-.dapha-banner{
+.dapha-banner {
     padding: 58px 0 84px;
 
     background: url(../images/nha-may-san-xuat/bg.jpg) no-repeat center;
     background-size: cover;
+    .dapha-inner {
+        padding: 0 45px;
+        > .para-normal {
+            margin-top: 24px;
+        }
+    }
+    .dapha-line {
+        width: 172px;
+        background-color: #e09826;
+    }
+    .para-normal {
+        @extend .font-utm;
+        line-height: 25px;
+        margin-bottom: 0;
+    }
+    .row {
+        margin: 0;
+    }
+    .reset-col {
+        padding: 0;
+        &:first-child {
+            flex: 1;
+            margin-right: 24px;
+        }
+        &:last-child {
+            max-width: 670px;
+            flex: auto;
+        }
+    }
+}
+.dapha-factory {
+    .section2 {
+        background: url(../images/nha-may-san-xuat/bg-section2.jpg) no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 94px 0;
+        .dapha-section2 {
+            padding: 34px 0;
+            background: rgba(58, 75, 0, 0.7);
+        }
+        .dapha-title {
+            background: linear-gradient(90.17deg, rgba(0, 0, 0, 0) 0.17%, rgba(0, 0, 0, 0.4) 48.34%, rgba(0, 0, 0, 0) 88.85%);
+            border-radius: 6px;
+        }
+        .para-normal{
+            display: flex;
+            max-width: 1066px;
+            margin: 10px auto 0;
+            picture{
+                margin-right: 10px;
+            }
+        }
+    }
 }
