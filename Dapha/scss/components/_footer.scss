@@ -1,0 +1,65 @@
+footer {
+    padding: 37px 0;
+    .address-group {
+        display: flex;
+        picture {
+            margin-right: 8px;
+        }
+        p {
+            @extend .txt-white;
+        }
+    }
+}
+.footer{
+    &-logo{
+        picture{
+            max-width: 120px;
+        }
+    }
+    &-group{
+        display: flex;
+        align-items: center;
+    }
+    &-logo{
+        margin-right: 72px;
+    }
+    &-info {
+        &-name {
+            font-size: 24px;
+            line-height: 35px;
+            color: #e09826;
+
+            @extend .font-Roboto;
+        }
+    }
+
+    &-address{
+        max-width: 773px;
+        display: flex;
+
+        margin-top: 16px;
+        ul:first-child{
+            margin-right: 32px;
+        }
+    }
+}
+.address-item{
+    picture{
+        max-width: 24px;
+    }
+    &:not(:last-child){
+        margin-bottom: 8px;
+    }
+    &:nth-child(1),
+    &:nth-child(2){
+        picture{
+            max-width: 16px;
+        }
+    }
+
+    &:nth-child(3){
+        picture{
+            max-width: 29px;
+        }
+    }
+}

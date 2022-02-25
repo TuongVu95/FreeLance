@@ -29,9 +29,16 @@ $spacing-para: 24px;
     font-size: 24px;
     line-height: 35px;
 }
+.dapha-wrap{
+    padding-bottom: 32px;
+}
+.dapha-section{
+    &:not(:last-child){
+        margin-bottom: 24px;
+    }
+}
 
 .dapha-slide {
-
     .dapha-inner {
         position: relative;
     }
@@ -51,18 +58,16 @@ $spacing-para: 24px;
         max-width: 330px;
         margin-left: auto;
     }
-    .swiper-slide{
 
-    }
-    .slide-1{
+    .slide-1 {
         background: url(../images/home-cate/bg-banner-home.jpg) no-repeat center;
-    background-size: cover;
-    padding: 100px 0 96px;
+        background-size: cover;
+        padding: 100px 0 96px;
     }
     .slide-2 {
         background: url(../images/nha-may-san-xuat/bg-section2.jpg) no-repeat center;
-    background-size: cover;
-    padding: 88px 0 89px;
+        background-size: cover;
+        padding: 88px 0 89px;
         .dapha-line {
             background-color: $link-hover;
             margin: 24px auto;
@@ -90,11 +95,72 @@ $spacing-para: 24px;
             }
         }
     }
-    .vector{
+    .vector {
         margin-top: 20px;
-        picture{
+        picture {
             max-width: 90px;
             margin-left: auto;
+        }
+    }
+}
+.section2 {
+    .row{
+        margin-right: -16px;
+        margin-left: -16px;
+    }
+    .rs-col{
+        padding: 0 16px;
+    }
+    .btn-none-events {
+        background: #3a4b00;
+        box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        padding: 10px;
+        margin-top: 32px;
+    }
+    &-btn{
+        max-width: 500px;
+        margin: auto;
+
+        text-align: center;
+    }
+}
+
+.section-tabs-horizontal{
+    padding: 24px 0 50px;
+    overflow: hidden;
+    .tabs-item{
+        &-name{
+            margin-bottom: 16px;
+        }
+        .para-normal {
+            line-height: 25px;
+            word-break: break-word;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+    }
+    .dapha-inner{
+        position: relative;
+        padding: 0 103px 0 123px;
+        .row{
+            padding: 0 12px;
+            margin: 0;
+        }
+        &::before, &:after{
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: #E09826;
+            height: 180px;
+        }
+        &::before{
+            top:0;
+            left: 123px;
+        }
+        &:after{
+            bottom: -66px;
+            right: 103px;
         }
     }
 }
