@@ -5,6 +5,7 @@ $spacing-para: 24px;
 
 .dapha-para {
     color: $link-hover;
+    @extend .font-svn;
 }
 .para-heading-36 {
     font-size: 36px;
@@ -20,6 +21,8 @@ $spacing-para: 24px;
 
 .para-normal {
     margin-bottom: $spacing-para;
+    font-size: 18px;
+    line-height: 21px;
 }
 
 .para-desc {
@@ -28,15 +31,70 @@ $spacing-para: 24px;
 }
 
 .dapha-slide {
-    padding: 100px 0 95px;
 
-    background: url(../images/home-cate/bg-banner-home.jpg) no-repeat center;
-    background-size: cover;
-
+    .dapha-inner {
+        position: relative;
+    }
     .dapha-box {
         background-color: $main-color;
         padding: $spacing-slide-y $spacing-slide-x;
 
         border-radius: 6px;
+        .para-normal {
+            @extend .font-Roboto;
+        }
+    }
+    .col-8 {
+        max-width: 756px;
+    }
+    .col-4 {
+        max-width: 330px;
+        margin-left: auto;
+    }
+    .swiper-slide{
+
+    }
+    .slide-1{
+        background: url(../images/home-cate/bg-banner-home.jpg) no-repeat center;
+    background-size: cover;
+    padding: 100px 0 96px;
+    }
+    .slide-2 {
+        background: url(../images/nha-may-san-xuat/bg-section2.jpg) no-repeat center;
+    background-size: cover;
+    padding: 88px 0 89px;
+        .dapha-line {
+            background-color: $link-hover;
+            margin: 24px auto;
+        }
+        .para-normal {
+            line-height: 25px;
+            margin-bottom: 20px;
+            @extend .font-utm;
+        }
+    }
+    .box-group {
+        padding: 0 77px 0 107px;
+        .box-item {
+            background: $link-hover;
+            box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 6px;
+
+            padding: 10px 24px 40px;
+
+            height: 100%;
+            > * {
+                font-size: 18px;
+                line-height: 25px;
+                color: $black;
+            }
+        }
+    }
+    .vector{
+        margin-top: 20px;
+        picture{
+            max-width: 90px;
+            margin-left: auto;
+        }
     }
 }
