@@ -1,3 +1,6 @@
+.contact-wrap{
+    
+}
 .contact-banner {
   padding-top: 640px;
   width: 100%;
@@ -5,9 +8,12 @@
   background-size: cover;
 }
 .section-contact {
-  margin: 36px 0;
+  padding: 36px 0 0;
   display: flex;
   justify-content: center;
+  background-image: url('../images/bg-dapha.png');
+    background-repeat: repeat-x;
+    background-position-y: -360px;
   .company-info {
     max-width: 578px;
     width: 60%;
@@ -52,6 +58,7 @@
       box-sizing: border-box;
       border-radius: 4px;
       outline: none;
+      background:  transparent;
       &,
       &::placeholder {
         font-family: $font-family;
