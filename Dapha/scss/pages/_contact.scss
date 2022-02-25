@@ -1,0 +1,91 @@
+.contact-banner {
+  padding-top: 640px;
+  width: 100%;
+  background: url("../images/lien-he/banner.png");
+  background-size: cover;
+}
+.section-contact {
+  margin: 36px 0;
+  display: flex;
+  justify-content: center;
+  .company-info {
+    max-width: 578px;
+    width: 60%;
+    margin-right: 64px;
+  }
+  .company-name {
+    font-family: $font-family;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 53px;
+    color: #3a4b00;
+    margin-bottom: 16px;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    .item-img {
+      margin-right: 8px;
+    }
+    .item-text {
+      font-family: $font-family;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+      color: #32373d;
+    }
+  }
+  .customer-info {
+    max-width: 388px;
+    flex: 1;
+    .input-wrap {
+      margin-bottom: 16px;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 4px 10px 8px;
+      border: 1px solid #939ca3;
+      box-sizing: border-box;
+      border-radius: 4px;
+      outline: none;
+      &,
+      &::placeholder {
+        font-family: $font-family;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 33px;
+        color: #32373d;
+      }
+    }
+    textarea {
+      min-height: 182px;
+    }
+    .desc {
+      font-family: $font-family;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 27px;
+      margin-bottom: 16px;
+    }
+    .btn-box {
+      text-align: center;
+    }
+    .btn-send {
+      padding: 9px 44px 15px;
+      background: #3a4b00;
+      border-radius: 4px;
+      display: inline-block;
+      font-family: $font-family;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 33px;
+      color: #fff;
+    }
+  }
+}
