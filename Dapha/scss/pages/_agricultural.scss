@@ -1,0 +1,81 @@
+.dapha-agricultural {
+    .dapha-banner {
+        background: url(../images/nong-san/bg-banner.jpg) no-repeat center;
+        background-size: cover;
+
+        padding: 162px 0 138px;
+        .dapha-inner {
+            padding: 0;
+        }
+        .dapha-title {
+            background: linear-gradient(90.17deg, rgba(0, 0, 0, 0) 0.17%, rgba(0, 0, 0, 0.4) 48.34%, rgba(0, 0, 0, 0) 88.85%);
+            border-radius: 6px;
+        }
+        .dapha-title,
+        .para-normal {
+            max-width: 969px;
+            margin: auto;
+        }
+        .para-normal {
+            font-size: 24px;
+            line-height: 33px;
+        }
+        .line-left {
+            margin-left: calc((100% - 969px) / 2);
+        }
+        .line-right {
+            margin-right: calc((100% - 969px) / 2);
+        }
+    }
+    .dapha-section{
+        margin-bottom: 0;
+    }
+}
+.dapha-section-limit {
+    max-width: 1600px;
+    margin-bottom: 0 !important;
+    .dapha-title{
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+    }
+    .dapha-content{
+        padding-left: 24px;
+        padding-top: 32px;
+
+        max-width: 579px;
+        margin: auto auto 0 0;
+
+        .para-normal{
+            line-height: 26px;
+        }
+    }
+    .col-reverse{
+        &:first-child{
+            order: 1;
+        }
+        &:last-child{
+            order: 0;
+        }
+        .dapha-content{
+            padding-right: 24px;
+            padding-left: 0;
+
+            margin: auto 0 auto auto;
+        }
+    }
+    .line-right {
+        max-width: 266px;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    &.section2{
+        picture{
+            @include aspect-ratio(800,339,0);
+        }
+    }
+    &.section3{
+
+        picture{
+            @include aspect-ratio(800,370,0);
+        }
+    }
+}
