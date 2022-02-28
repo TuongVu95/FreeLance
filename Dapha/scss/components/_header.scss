@@ -33,7 +33,7 @@ $spacing-y: 24px;
                 opacity: 0;
                 visibility: hidden;
 
-                transition:  $transition;
+                transition:  all .6s;
                 transform: scale(0);
             }
         }
@@ -45,6 +45,7 @@ $spacing-y: 24px;
                     visibility: visible;
 
                     width: 100%;
+                    transition:  all .6s;
                     transform: scale(1);
                 }
                 > * {
