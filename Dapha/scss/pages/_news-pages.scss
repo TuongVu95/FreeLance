@@ -1,0 +1,56 @@
+.dapha-news {
+    padding: 36px 0 20px;
+    .dapha-section{
+        max-width: 988px;
+        margin: auto;
+    }
+}
+.news-para {
+
+    .dapha-line {
+        width: 118px;
+    }
+    .para-normal {
+        color: #444b52;
+        line-height: 24px;
+    }
+    .para-title {
+        font-size: 20px;
+        line-height: 28px;
+        color: #212529;
+    }
+    .para-list {
+        padding-left: 28px;
+        li {
+            position: relative;
+            &:not(:last-child){
+                margin-bottom: 4px;
+            }
+            .para-normal{
+                margin-bottom: 0;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: -18px;
+                top:12px;
+                height: 4px;
+                width: 4px;
+                background-color: #444b52;
+                border-radius: 50%;
+                display: inline-block;
+            }
+        }
+    }
+    > *,
+    .para-normal {
+        margin-bottom: 8px;
+    }
+
+    figure{
+        margin: 12px 0;
+        img{
+            border-radius: 6px;
+        }
+    }
+}

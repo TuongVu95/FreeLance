@@ -1,14 +1,11 @@
 .dapha-agricultural {
     position: relative;
-
-    // background-size: contain;
-    // background-attachment: fixed;
     &:after {
         content: "";
         background: url(../images/mask.png) no-repeat center;
         background-size: 100% 42%;
         background-position-y: 46%;
-        // width: 1600px;
+
         opacity: 0.4;
         top: 339px;
         left: 0;

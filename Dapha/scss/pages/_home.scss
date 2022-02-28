@@ -2,6 +2,10 @@ $spacing-slide-y: 24px;
 $spacing-slide-x: 32px;
 
 $spacing-para: 24px;
+$background-wrap: #EDEEEF;
+.dapha-wrap{
+    background: $background-wrap;
+}
 
 .dapha-para {
     color: $link-hover;
