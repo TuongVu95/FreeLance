@@ -79,60 +79,33 @@
 //
 // Font Icon
 //
-@font-face {
-	font-family: '#{$font-icon-family}';
-	src: url('../fonts/#{$font-icon-path}/#{$font-icon-file}.eot?7h9xfl');
-	src: url('../fonts/#{$font-icon-path}/#{$font-icon-file}.eot?7h9xfl#iefix') format('embedded-opentype'),
-		url('../fonts/#{$font-icon-path}/#{$font-icon-file}.ttf?7h9xfl') format('truetype'),
-		url('../fonts/#{$font-icon-path}/#{$font-icon-file}.woff?7h9xfl') format('woff'),
-		url('../fonts/#{$font-icon-path}/#{$font-icon-file}.svg?7h9xfl##{$font-icon-file}') format('svg');
-	font-weight: normal;
-	font-style: normal;
-	font-display: block;
-}
+// @font-face {
+// 	font-family: '#{$font-icon-family}';
+// 	src: url('../fonts/#{$font-icon-path}/#{$font-icon-file}.eot?7h9xfl');
+// 	src: url('../fonts/#{$font-icon-path}/#{$font-icon-file}.eot?7h9xfl#iefix') format('embedded-opentype'),
+// 		url('../fonts/#{$font-icon-path}/#{$font-icon-file}.ttf?7h9xfl') format('truetype'),
+// 		url('../fonts/#{$font-icon-path}/#{$font-icon-file}.woff?7h9xfl') format('woff'),
+// 		url('../fonts/#{$font-icon-path}/#{$font-icon-file}.svg?7h9xfl##{$font-icon-file}') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// 	font-display: block;
+// }
 
-[class^='ic-'],
-[class*=' ic-'] {
-	/* use !important to prevent issues with browser extensions that change fonts */
-	font-family: '#{$font-icon-family}' !important;
-	// speak: never;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+// [class^='ic-'],
+// [class*=' ic-'] {
+// 	/* use !important to prevent issues with browser extensions that change fonts */
+// 	font-family: '#{$font-icon-family}' !important;
+// 	// speak: never;
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	font-variant: normal;
+// 	text-transform: none;
+// 	line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	&:before{
-		font-family: '#{$font-icon-family}' !important;
-	}
-}
-
-
-@each $keys, $content in $icons{
-	// @debug $content;
-	.ic-#{$keys}{
-		&:before{
-			content: '#{$content}';
-		}
-	}
-}
-
-$icon-path-color: $gray !default;
-$icon-path2-color: $white !default;
-
-.ic-circle{
-	color: $icon-path-color;
-
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-
-	.path2{
-		margin-left: -1em;
-		color: $icon-path2-color;
-	}
-
-}
+// 	/* Better Font Rendering =========== */
+// 	-webkit-font-smoothing: antialiased;
+// 	-moz-osx-font-smoothing: grayscale;
+// 	&:before{
+// 		font-family: '#{$font-icon-family}' !important;
+// 	}
+// }

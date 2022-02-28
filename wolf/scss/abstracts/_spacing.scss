@@ -1,5 +1,3 @@
-.p-l-1 { padding-left: 1px; }
-
 //margin
 @include space('.m-t-', 'margin-top');
 @include space('.m-l-', 'margin-left');
@@ -18,50 +16,50 @@
 @include spaceXY('.m-y-', 'margin-top', 'margin-bottom');
 @include spaceXY('.m-x-', 'margin-right', 'margin-left');
 //padding & margin : x & y
-.m-l-auto{ margin-left: auto !important; }
-.m-r-auto{ margin-right: auto !important; }
+.m-l-auto{ margin-left: auto ; }
+.m-r-auto{ margin-right: auto ; }
 .m-x-auto{
-  margin-right: auto !important;
-  margin-left: auto !important;
+  margin-right: auto ;
+  margin-left: auto ;
 }
 @each $breakpoint, $value in $breakpoints-mb {
   $infix: breakpoint-infix($breakpoint, $breakpoints-mb);
   @include media-breakpoint-down($breakpoint, $breakpoints-mb) {
     @each $i in $spacer-mb {
       //margin
-      .m-t#{$infix}-#{$i} { margin-top: #{$i}px  !important; }
-      .m-l#{$infix}-#{$i} { margin-left: #{$i}px  !important; }
-      .m-r#{$infix}-#{$i} { margin-right: #{$i}px  !important; }
-      .m-b#{$infix}-#{$i} {  margin-bottom: #{$i}px  !important; }
+      .m-t#{$infix}-#{$i} { margin-top: #{$i}px  ; }
+      .m-l#{$infix}-#{$i} { margin-left: #{$i}px  ; }
+      .m-r#{$infix}-#{$i} { margin-right: #{$i}px  ; }
+      .m-b#{$infix}-#{$i} {  margin-bottom: #{$i}px  ; }
 
       //margin-X
       .m-x#{$infix}-#{$i} {
-        margin-left: #{$i}px  !important;
-        margin-right: #{$i}px  !important;
+        margin-left: #{$i}px  ;
+        margin-right: #{$i}px  ;
       }
 
       //margin-Y
       .m-y#{$infix}-#{$i} {
-        margin-bottom: #{$i}px  !important;
-        margin-top: #{$i}px  !important;
+        margin-bottom: #{$i}px  ;
+        margin-top: #{$i}px  ;
       }
 
       //padding
-      .p-b#{$infix}-#{$i} {  padding-bottom: #{$i}px  !important; }
-      .p-r#{$infix}-#{$i} { padding-right: #{$i}px  !important; }
-      .p-l#{$infix}-#{$i} { padding-left: #{$i}px  !important; }
-      .p-t#{$infix}-#{$i} { padding-top: #{$i}px  !important; }
+      .p-b#{$infix}-#{$i} {  padding-bottom: #{$i}px  ; }
+      .p-r#{$infix}-#{$i} { padding-right: #{$i}px  ; }
+      .p-l#{$infix}-#{$i} { padding-left: #{$i}px  ; }
+      .p-t#{$infix}-#{$i} { padding-top: #{$i}px  ; }
 
       //padding X
       .p-x#{$infix}-#{$i} {
-        padding-right: #{$i}px  !important;
-        padding-left: #{$i}px  !important;
+        padding-right: #{$i}px  ;
+        padding-left: #{$i}px  ;
       }
 
       //padding Y
       .p-y#{$infix}-#{$i} {
-        padding-top: #{$i}px  !important;
-        padding-bottom: #{$i}px  !important;
+        padding-top: #{$i}px  ;
+        padding-bottom: #{$i}px  ;
       }
 
     }

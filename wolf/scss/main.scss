@@ -1,52 +1,18 @@
 // @import 'abstracts/_function';
 @import "abstracts/_variables";
 @import "abstracts/_mixins";
+@import "abstracts/_spacing";
 @import "abstracts/_fonts";
-
 @import "abstracts/_utilities";
 
 //layout
 @import "layout/_reboot";
 
 //components
-@import "components/_header";
-@import "components/_typography";
-@import "components/_box-shadow";
-@import "components/_scrollbar";
-@import "components/_button";
-@import "components/_label";
-@import "components/_container";
-@import "components/_list";
-@import "components/_grid";
-@import "components/_form";
-@import "components/_badge";
-@import "components/_progress-bar";
-@import "components/_page-cart-check";
-@import "components/_breadcrumb";
-@import "components/_options";
-@import "components/_alert";
-@import "components/_icon";
-@import "components/_tooltip";
-@import "components/_table";
-@import "components/_dropdown";
-@import "components/_btn-group";
-@import "components/_tag-input";
-@import "components/_avatar";
-@import "components/_accordion";
-@import "components/_pagination";
-@import "components/_stepper";
-@import "components/_spinner";
-@import "components/_tab.scss";
-@import "components/_toggle";
-@import "components/_modal";
-@import "components/_slide";
-@import "components/_product-component";
-@import "components/cursor";
-// @import "components/_indicator";
-// @import "components/_file-uploader";
-// @import "components/_slider";
+@import "components/core/_container";
+@import "components/core/_grid";
+@import "components/core/_form";
+
 
 //
-@import "abstracts/_spacing";
-@import "components/_page-component";
-@import "components/_comment";
+

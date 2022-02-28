@@ -1,9 +1,4 @@
-//text color
-@each $key, $value in $colors {
-    .txt-#{$key} {
-        color: #{$value} !important;
-    }
-}
+
 .txt-center{
     text-align: center !important;
 }

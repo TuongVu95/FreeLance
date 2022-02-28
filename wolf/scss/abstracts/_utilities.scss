@@ -5,8 +5,4 @@
 @import 'utilities/_display';
 @import 'utilities/_float';
 
-.circle{border-radius: 10000px !important;}
-@include respond-to('md'){
-    .circle-mb{border-radius: 10000px !important;}
-}
 .overflow-hidden{ overflow: hidden; }
