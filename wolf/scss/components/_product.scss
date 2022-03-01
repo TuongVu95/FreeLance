@@ -1,0 +1,32 @@
+$product-home: #333333;
+
+.picture-hover{
+    img{
+        transition: $transition;
+    }
+    @media (min-width: 992px) {
+        &:hover,&:focus{
+            img{
+                transform: scale(1.04);
+            }
+        }
+    }
+}
+.product {
+    &__picture{
+        @extend .picture-hover;
+        img{
+            border-radius: .6rem;
+        }
+    }
+}
+.product__home{
+    @extend .txt-center;
+    &-name{
+        font-size: 1.2rem;
+        color: $product-home;
+    }
+    &-picture{
+        margin-bottom: 1rem;
+    }
+}

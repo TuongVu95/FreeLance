@@ -1,0 +1,18 @@
+$pacing-section: 4rem;
+$color-title: #333;
+$color-desc: #6d6d6d;
+$background-pic3: #f4f4f4;
+
+.home-pages {
+    .section-spacing {
+        padding: $pacing-section 0;
+    }
+    .banner {
+        margin-bottom: 4rem;
+        &__item {
+            picture {
+                @include aspect-ratio(1600, 606, 0);
+            }
+        }
+    }
+}

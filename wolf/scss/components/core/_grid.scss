@@ -52,3 +52,7 @@ $padding-x-mb: 8px !default;
     // }
   }
 }
+.flex-column{
+  @extend .u-flex, .flex-column;
+  justify-content: center;
+}
