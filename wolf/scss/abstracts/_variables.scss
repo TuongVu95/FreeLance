@@ -8,7 +8,7 @@
 // === font family ===
 $font-family: "Roboto";
 // $font-family-path: "../frontend_v3/fonts/Roboto";
-$font-family-path: "../frontend_v3/fonts/Roboto";
+$font-family-path: "../fonts/Roboto";
 
 //
 // Color system
@@ -209,12 +209,13 @@ $spacer: 0, 8, 10, 12, 14, 16, 20;
 $spacer-mb: 0, 8, 10, 12, 14, 16;
 
 $fs-p: (
+  "12": "16",
+  // "13": "18",
   "14": "20",
   // "15": "20",
   "16": "24",
   "18": "24",
   "20": "28",
-  "24": "32",
 );
 
 $fs-p-mb: (

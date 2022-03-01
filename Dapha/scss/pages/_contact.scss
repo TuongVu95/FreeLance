@@ -1,7 +1,7 @@
 .contact-banner {
   padding-top: 640px;
   width: 100%;
-  background: url("../images/lien-he/banner.png");
+  background: url("../images/lien-he/banner.webp");
   background-size: cover;
 }
 .section-contact {
@@ -11,6 +11,8 @@
   // background-image: url('../images/bg-dapha.png');
     // background-repeat: repeat-x;
     // background-position-y: -360px;
+    background: url("../images/lien-he/mask.png") no-repeat center;
+    background-size: cover;
   .company-info {
     max-width: 578px;
     width: 60%;

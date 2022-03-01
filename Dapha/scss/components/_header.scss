@@ -4,6 +4,10 @@ $spacing-y: 24px;
 .dapha-header{
     padding: $spacing-y 0;
     @extend .bg-dapha;
+    position: sticky;
+    top:-1px;
+    width: 100%;
+    z-index: 999;
     &-nav{
         display: flex;
         justify-content: center;
@@ -13,7 +17,10 @@ $spacing-y: 24px;
 .dapha-header-nav{
     &-item{
         position: relative;
-
+        a{
+            font-size: 16px;
+line-height: 24px;
+        }
         &.logo{
             max-width: 85px;
         }
@@ -48,9 +55,9 @@ $spacing-y: 24px;
                     transition:  all .6s;
                     transform: scale(1);
                 }
-                > * {
-                    color: $link-hover;
-                    font-weight: 500;
+                a{
+                    color: #E09826;
+                // font-weight: bold;
                 }
             }
         }

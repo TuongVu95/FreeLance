@@ -4,24 +4,19 @@ $spacing-slide-x: 32px;
 $spacing-para: 24px;
 $background-wrap: #EDEEEF;
 .dapha-wrap{
-    // background: $background-wrap;
-    position: relative;
-    &:after {
-        content: "";
-        background: url(../images/mask.png) no-repeat center;
-        background-size: 100% 42%;
-        background-position-y: 46%;
-
-        opacity: 0.4;
-        top: 339px;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;
-      }
+    background: #E5E5E5;
 }
+.section2{
+    position: relative;
 
+    background: url(../images/mask.png) no-repeat center;
+    background-size: 100% 120%;
+}
+.bg-hat{
+    background: url(../images/mask.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
 .dapha-para {
     color: $link-hover;
     @extend .font-svn;
@@ -50,14 +45,25 @@ $background-wrap: #EDEEEF;
 }
 .dapha-wrap{
     padding-bottom: 32px;
+    // padding: 132px 0 32px 0;
 }
 .dapha-section{
     &:not(:last-child){
         margin-bottom: 24px;
     }
 }
-
+.dapha-home{
+    .section2{
+        margin-bottom: 0 !important;
+        padding: 24px 0 20px;
+        &-btn{
+            max-width: 500px;
+            margin: auto;
+        }
+    }
+}
 .dapha-slide {
+    margin-bottom: 0 !important;
     .dapha-inner {
         position: relative;
     }
@@ -82,11 +88,12 @@ $background-wrap: #EDEEEF;
         background: url(../images/home-cate/bg-banner-home.jpg) no-repeat center;
         background-size: cover;
         padding: 100px 0 96px;
+        height: auto;
     }
     .slide-2 {
         background: url(../images/nha-may-san-xuat/bg-section2.jpg) no-repeat center;
         background-size: cover;
-        padding: 88px 0 89px;
+        padding: 86px 0 86px;
         .dapha-line {
             background-color: $link-hover;
             margin: 24px auto;
@@ -137,6 +144,8 @@ $background-wrap: #EDEEEF;
         padding: 10px;
         margin-top: 32px;
         text-align: center;
+
+        font-family: "SVN-HC-Al", Arial, Helvetica, sans-serif;
     }
     &-btn{
         max-width: 500px;
@@ -144,6 +153,7 @@ $background-wrap: #EDEEEF;
 
         text-align: center;
     }
+
 }
 
 .section-tabs-horizontal{
@@ -152,6 +162,7 @@ $background-wrap: #EDEEEF;
     .tabs-item{
         &-name{
             margin-bottom: 16px;
+            font-family: $font-SVN-AL, Arial, Helvetica, sans-serif;
         }
         .para-normal {
             line-height: 25px;
@@ -183,10 +194,5 @@ $background-wrap: #EDEEEF;
             right: 103px;
         }
     }
-}
-.section2{
-    &-btn{
-        max-width: 500px;
-        margin: auto;
-    }
+
 }

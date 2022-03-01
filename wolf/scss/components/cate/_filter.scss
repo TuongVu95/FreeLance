@@ -1,0 +1,10 @@
+.filter__checkbox{
+    &-item{
+        &:not(:last-child){
+            @extend .m-b-8;
+        }
+    }
+}
+.page__line{
+
+}

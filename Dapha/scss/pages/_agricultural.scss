@@ -1,19 +1,13 @@
 .dapha-agricultural {
     position: relative;
-    &:after {
-        content: "";
-        background: url(../images/mask.png) no-repeat center;
-        background-size: 100% 42%;
-        background-position-y: 46%;
 
-        opacity: 0.4;
-        top: 339px;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;
-      }
+    .dapha-section-limit{
+        position: relative;
+
+        // background: url(../images/home-cate/mask.png) no-repeat center;
+        // background-size: cover;
+        // background-attachment: fixed;
+    }
     .dapha-banner {
         background: url(../images/nong-san/bg-banner.jpg) no-repeat center;
         background-size: cover;
@@ -48,10 +42,11 @@
     }
 }
 .dapha-section-limit {
-    max-width: 1600px;
+    max-width: 2000px;
     margin-bottom: 0 !important;
+    margin: auto auto 0;
     .dapha-title{
-        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
     }
     .dapha-content{
         padding-left: 24px;

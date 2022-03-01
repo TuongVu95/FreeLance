@@ -70,7 +70,18 @@
     }
 
     .section-cate{
-        padding-top: 20px;
+        padding-top: 24px;
+        margin-top: 44px;
+        background: url(../images/mask.png) no-repeat center;
+        background-size: cover;
+         .container{
+             max-width: 1217px;
+             padding: 0;
+         }
+        .row{
+            margin-right: -32px;
+            margin-left: -32px;
+        }
         .rs-col{
             padding: 0 32px;
         }
@@ -81,6 +92,7 @@
             .para-normal{
                 color: #32373D;
                 text-align: justify;
+                line-height: 25px;
                 .inline-readmore{
                     cursor: pointer;
                 }

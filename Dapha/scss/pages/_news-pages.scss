@@ -1,6 +1,7 @@
 .dapha-news {
     padding: 36px 0 20px;
-
+    background: url(../images/tin-tuc/mask.webp) no-repeat center;
+    background-size: cover;
     .dapha-section {
         max-width: 988px;
         margin: auto;
@@ -29,6 +30,9 @@
     }
 }
 .news-para {
+    &-title{
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+    }
     .dapha-line {
         width: 118px;
     }
