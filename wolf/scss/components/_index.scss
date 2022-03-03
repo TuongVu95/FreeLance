@@ -6,5 +6,9 @@
 @import "./cate/_sidebar";
 @import "./cate/_filter";
 
-
 @import "./_product";
+
+// FAQ
+
+@import "./FAQ/search-helper";
+@import "./FAQ/topic-block";
