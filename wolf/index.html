@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- CSS file import -->
+    <link rel="stylesheet" href="css/libs/swiper.min.css">
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Js file import -->
@@ -16,7 +17,48 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__top">
+                    <div class="header__logo txt-center">
+                        <a href="http://">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="">
+                                <img src="https://via.placeholder.com/168x60" alt="Logo">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <ul class="nav__level0">
+                    <li>
+                        <a href="http://">
+                            <span>Man</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://">
+                            <span>Man</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://">
+                            <span>Man</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://">
+                            <span>Man</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://">
+                            <span>Man</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
     <main class="page-wrapper home-pages">
         <!-- banner -->
@@ -26,6 +68,7 @@
                     <div class="banner__item">
                         <a href="http://">
                             <picture>
+                                <source media="(max-width: 768px)" srcset="https://via.placeholder.com/644x644">
                                 <img src="https://via.placeholder.com/1980x750" alt="banner">
                             </picture>
                         </a>
@@ -39,7 +82,7 @@
             <div class="container">
                 <div class="section__page-inner">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-6 col-sm-12">
                             <div class="block__item">
                                 <a href="">
                                     <picture class="block__picture">
@@ -57,7 +100,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 col-sm-12">
                             <div class="block__item">
                                 <a href="">
                                     <picture class="block__picture">
@@ -80,19 +123,20 @@
             </div>
         </section>
 
-         <!-- section banner, video -->
-         <section class="section__page section__pic3 section-spacing">
+        <!-- section banner, video -->
+        <section class="section__page section__pic3 section-spacing">
             <div class="container">
                 <div class="section__page-inner">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-6 col-sm-12">
                             <div class="block__item">
                                 <div class="block__picture video">
-                                    <iframe src="https://player.vimeo.com/video/674569999?h=c30c45d979&amp;background=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-ready="true" loading="lazy"></iframe>
+                                    <iframe src="https://player.vimeo.com/video/674569999?h=c30c45d979&amp;background=1" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-ready="true" loading="lazy"></iframe>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 col-sm-12 m-t-20">
                             <div class="block__content txt-uppercase">
                                 <div class="block__group txt-center">
                                     <div class="block__title">
@@ -118,8 +162,8 @@
             </div>
         </section>
 
-         <!-- section list product -->
-         <section class="section__page section__pic3 section-spacing">
+        <!-- section list product -->
+        <section class="section__page section__pic3 section-spacing">
             <div class="container">
                 <div class="section__page-inner">
                     <div class="row row-cols-4 row-cols-sm-2">
@@ -188,7 +232,6 @@
             </div>
         </section>
 
-
         <!-- banner -->
         <section class="section__page section__banner">
             <div class="section__page-inner">
@@ -196,6 +239,7 @@
                     <div class="banner__item">
                         <a href="http://">
                             <picture>
+                                <source media="(max-width: 768px)" srcset="https://via.placeholder.com/644x644">
                                 <img src="https://via.placeholder.com/1980x750" alt="banner">
                             </picture>
                         </a>
@@ -203,7 +247,159 @@
                 </div>
             </div>
         </section>
+
+        <section class="section__page section__bestseller section-spacing">
+            <div class="container">
+                <div class="section__inner relative">
+                    <h2 class="section__title">BESTSELLERS</h2>
+                    <div class="swiper jsBestseller">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href class="product product-wrap">
+                                    <picture class="product__picture">
+                                        <source media="(max-width: 768px)" srcset="">
+                                        <img src="https://via.placeholder.com/297x166" alt="Img">
+                                    </picture>
+                                    <div class="product__group">
+                                        <span class="product__cart">
+                                            <i class="ic-cart-2"></i>
+                                        </span>
+                                        <h3 class="product__name">
+                                            WatchsWatchsWatchsWatchs
+                                        </h3>
+                                        <div class="product__price">
+                                            $200
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href class="product product-wrap">
+                                    <picture class="product__picture">
+                                        <source media="(max-width: 768px)" srcset="">
+                                        <img src="https://via.placeholder.com/297x166" alt="Img">
+                                    </picture>
+                                    <div class="product__group">
+                                        <span class="product__cart">
+                                            <i class="ic-cart-2"></i>
+                                        </span>
+                                        <h3 class="product__name">
+                                            WatchsWatchsWatchsWatchs
+                                        </h3>
+                                        <div class="product__price">
+                                            $200
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href class="product product-wrap">
+                                    <picture class="product__picture">
+                                        <source media="(max-width: 768px)" srcset="">
+                                        <img src="https://via.placeholder.com/297x166" alt="Img">
+                                    </picture>
+                                    <div class="product__group">
+                                        <span class="product__cart">
+                                            <i class="ic-cart-2"></i>
+                                        </span>
+                                        <h3 class="product__name">
+                                            WatchsWatchsWatchsWatchs
+                                        </h3>
+                                        <div class="product__price">
+                                            $200
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href class="product product-wrap">
+                                    <picture class="product__picture">
+                                        <source media="(max-width: 768px)" srcset="">
+                                        <img src="https://via.placeholder.com/297x166" alt="Img">
+                                    </picture>
+                                    <div class="product__group">
+                                        <span class="product__cart">
+                                            <i class="ic-cart-2"></i>
+                                        </span>
+                                        <h3 class="product__name">
+                                            WatchsWatchsWatchsWatchs
+                                        </h3>
+                                        <div class="product__price">
+                                            $200
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href class="product product-wrap">
+                                    <picture class="product__picture">
+                                        <source media="(max-width: 768px)" srcset="">
+                                        <img src="https://via.placeholder.com/297x166" alt="Img">
+                                    </picture>
+                                    <div class="product__group">
+                                        <span class="product__cart">
+                                            <i class="ic-cart-2"></i>
+                                        </span>
+                                        <h3 class="product__name">
+                                            WatchsWatchsWatchsWatchs
+                                        </h3>
+                                        <div class="product__price">
+                                            $200
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href class="product product-wrap">
+                                    <picture class="product__picture">
+                                        <source media="(max-width: 768px)" srcset="">
+                                        <img src="https://via.placeholder.com/297x166" alt="Img">
+                                    </picture>
+                                    <div class="product__group">
+                                        <span class="product__cart">
+                                            <i class="ic-cart-2"></i>
+                                        </span>
+                                        <h3 class="product__name">
+                                            WatchsWatchsWatchsWatchs
+                                        </h3>
+                                        <div class="product__price">
+                                            $200
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href class="product product-wrap">
+                                    <picture class="product__picture">
+                                        <source media="(max-width: 768px)" srcset="">
+                                        <img src="https://via.placeholder.com/297x166" alt="Img">
+                                    </picture>
+                                    <div class="product__group">
+                                        <span class="product__cart">
+                                            <i class="ic-cart-2"></i>
+                                        </span>
+                                        <h3 class="product__name">
+                                            WatchsWatchsWatchsWatchs
+                                        </h3>
+                                        <div class="product__price">
+                                            $200
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-button">
+                        <div class="swiper-button-next block-button"></div>
+                        <div class="swiper-button-prev block-button"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <script src="js/fn_home.js"></script>
 </body>
 
 </html>

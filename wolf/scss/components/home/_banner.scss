@@ -12,6 +12,28 @@ $background-pic3: #f4f4f4;
         &__item {
             picture {
                 @include aspect-ratio(1600, 606, 0);
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    @include respond-to("md") {
+        .section-spacing {
+            padding: calc(#{$pacing-section} - 1rem) 0;
+        }
+        .banner {
+            margin-bottom: 3rem;
+            &__item {
+                picture {
+                    @include aspect-ratio(644, 644, 0);
+                }
             }
         }
     }

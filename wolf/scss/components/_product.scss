@@ -13,20 +13,46 @@ $product-home: #333333;
     }
 }
 .product {
+    cursor: pointer;
+    > * {
+        color: $product-home;
+    }
     &__picture{
-        @extend .picture-hover;
+        // @extend .picture-hover;
         img{
             border-radius: .6rem;
+        }
+    }
+    &__group{
+        @extend .relative;
+        margin-top: .5rem;
+    }
+    &__name, &__price{
+        font-size: 1.4rem;
+        line-height: 2rem;
+        @extend .txt-uppercase, .truncate2;
+        color: $product-home;
+        font-weight: 300;
+    }
+    &__price{
+
+    }
+    &__cart{
+        position: absolute;
+        right:0;
+        i{
+            font-size: 1.8rem;
         }
     }
 }
 .product__home{
     @extend .txt-center;
-    &-name{
-        font-size: 1.2rem;
-        color: $product-home;
-    }
     &-picture{
         margin-bottom: 1rem;
+    }
+}
+.product-wrap{
+    .product__name{
+        padding-right: 2.8rem;
     }
 }

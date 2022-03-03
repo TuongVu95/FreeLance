@@ -1,55 +1,118 @@
 @import "./_banner";
+.home-pages{
+    .container{
+        max-width: 1200px;
+    }
+}
 .section__pic2 {
-    .block{
-       &__picture {
+    .block {
+        &__picture {
             margin-bottom: 1rem;
-            img{
-                border-radius: .4rem;
+            img {
+                border-radius: 0.4rem;
             }
         }
-        &__group-title{
+        &__group-title {
             font-size: 1.8rem;
             line-height: 3rem;
             color: $color-title;
         }
-        &__group-desc{
+        &__group-desc {
             font-size: 1.2rem;
             line-height: 2rem;
             color: $color-desc;
         }
     }
+    @include respond-to('sm'){
+        .col-sm-12{
+            &:not(:last-child){
+                margin-bottom: 2rem;
+            }
+        }
+    }
 }
 .section__pic3 {
     background-color: $background-pic3;
-    .video{
-        @include aspect-ratio(576, 310,0);
-        iframe{
+    .col{
+        margin-bottom: 2rem;
+    }
+    .video {
+        @include aspect-ratio(576, 310, 0);
+        iframe {
             width: 100%;
             height: 100%;
         }
     }
-    .block{
-        &__content{
+    .block {
+        &__content {
             height: 100%;
             @extend .flex-column;
         }
-        &__group{
+        &__group {
             // padding-top: 2.5rem;
         }
-        &__title{
+        &__title {
             font-size: 3.5rem;
             line-height: 3.5rem;
             margin-bottom: 1rem;
+
         }
-        &__sub-title{
+        &__sub-title {
             font-size: 1.2rem;
             line-height: 1.2rem;
             margin-bottom: 2rem;
         }
-        &__button{
-            .btn{
+        &__button {
+            .btn {
                 padding: 1.8rem 4rem;
             }
+        }
+    }
+}
+.section__bestseller {
+    @extend .relative;
+    &:after{
+        background: #f4f4f4;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        height: 4px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .section__title {
+        font-size: 2.3rem;
+        margin-bottom: 2.5rem;
+        padding-top: 1em;
+        @extend .txt-uppercase;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #606060;
+    }
+    .block-button {
+        color: #4d4d4d;
+        top: calc(100% - 8.1rem);
+        &:after {
+            font-size: 2.4rem;
+            font-weight: bold;
+        }
+    }
+    .swiper-button-next {
+        right: -4rem;
+    }
+    .swiper-button-prev {
+        left: -4rem;
+    }
+    @include respond-to('lg'){
+        .swiper-button-next {
+            right: 0;
+        }
+        .swiper-button-prev {
+            left: 0;
         }
     }
 }

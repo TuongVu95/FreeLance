@@ -1,0 +1,24 @@
+.header{
+    position: sticky;
+    top:0 ;
+    z-index: 9;
+    padding-bottom: 1rem;
+    background: $white;
+    &__top{
+        padding: 1.6rem;
+    }
+}
+.nav__level0{
+    @extend .u-flex, .align-items-center;
+    li{
+        flex: 1;
+        &:not(:last-child){
+            // margin-right: 2rem;
+        }
+        a{
+            display: block;
+            font-size: 1.4rem;
+            padding: 0 2rem;
+        }
+    }
+}
