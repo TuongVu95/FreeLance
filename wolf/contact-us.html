@@ -78,7 +78,71 @@
               Road&nbsp;<br> Kowloon&nbsp;<br> Hong Kong<br></p>
           </div>
           <div class="contact__content--right">
-
+            <div class="contact__fieldset">
+              <form action="" class="form contact">
+                <fieldset class="fieldset">
+                  <div class="field note no-label">Please use this form to send us a message.</div>
+                  <div class="field name required">
+                    <label class="label" for="name"><span>Name</span></label>
+                    <div class="control">
+                      <input name="name" id="name" title="Name" value="" class="input-text" type="text"
+                        data-validate="{required:true}" aria-required="true">
+                    </div>
+                  </div>
+                  <div class="field email required">
+                    <label class="label" for="email"><span>Email</span></label>
+                    <div class="control">
+                      <input name="email" id="email" title="Email" value="" class="input-text" type="email"
+                        data-validate="{required:true, 'validate-email':true}" aria-required="true">
+                    </div>
+                  </div>
+                  <div class="field telephone required">
+                    <label class="label" for="telephone"><span>Phone Number</span></label>
+                    <div class="control">
+                      <input name="telephone" id="telephone" title="Phone Number" value="" class="input-text"
+                        type="text">
+                    </div>
+                  </div>
+                  <div class="field country">
+                    <label class="label" for="country"><span>Country</span></label>
+                    <div class="control">
+                      <select name="country_id" id="country" class="" title="Country"
+                        data-validate="{'validate-select':true}">
+                        <option value="" selected="selected"></option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="VU">Vanuatu</option>
+                        <option value="VA">Vatican City</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="VN">Vietnam</option>
+                        <option value="WF">Wallis &amp; Futuna</option>
+                        <option value="EH">Western Sahara</option>
+                        <option value="YE">Yemen</option>
+                        <option value="ZM">Zambia</option>
+                        <option value="ZW">Zimbabwe</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field subject">
+                    <label class="label" for="subject"><span>Subject</span></label>
+                    <div class="control">
+                      <input name="subject" id="subject" title="Subject" value="" class="input-text" type="text">
+                    </div>
+                  </div>
+                  <div class="field comment required">
+                    <label class="label" for="comment"><span>Message</span></label>
+                    <div class="control">
+                      <textarea name="comment" id="comment" title="Message" class="input-text" cols="5" rows="3"
+                        data-validate="{required:true}" aria-required="true">
+                      </textarea>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="btn__action">
+                  <button class="action submit primary"><span>Submit</span></button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
