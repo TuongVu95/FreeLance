@@ -1,0 +1,24 @@
+.contact {
+  &__wrapper {
+    padding: 3rem 0;
+  }
+  &__title {
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+  }
+  &__content {
+    &--left {
+      h4 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
