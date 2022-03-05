@@ -18,7 +18,7 @@
       width: 50%;
       padding: 0 1.2rem;
       @include respond-to("md") {
-        padding: 0 0.8rem;
+        padding: 0;
         width: 100%;
       }
       &.full {
