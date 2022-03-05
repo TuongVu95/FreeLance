@@ -72,6 +72,8 @@ $background-wrap: #EDEEEF;
         padding: $spacing-slide-y $spacing-slide-x;
 
         border-radius: 6px;
+        background: url(../images/swiper/mask.webp) no-repeat center $main-color;
+        background-size: 100% 100%;
         .para-normal {
             @extend .font-Roboto;
         }
@@ -85,7 +87,7 @@ $background-wrap: #EDEEEF;
     }
 
     .slide-1 {
-        background: url(../images/home-cate/bg-banner-home.jpg) no-repeat center;
+        background: url(../images/home-cate/bg-banner-home.webp) no-repeat center;
         background-size: cover;
         padding: 100px 0 96px;
         height: auto;
@@ -195,4 +197,13 @@ $background-wrap: #EDEEEF;
         }
     }
 
+}
+.button-scroll{
+    position: absolute;
+    right:calc((100vw - 1200px)/2 + 48px);
+    bottom: 82px;
+    z-index: 99;
+
+    max-width: 48px;
+    cursor: pointer;
 }

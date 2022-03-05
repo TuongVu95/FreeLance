@@ -7,7 +7,7 @@ const ReadMore = (params) => {
     });
 }
 
-const init = (params) => {
+var init = (params) => {
     ReadMore();
 }
 init();

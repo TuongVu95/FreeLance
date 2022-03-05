@@ -5,14 +5,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-
+    <link rel="shortcut icon" href="images/logo.jpg"/>
+    <title>Dapha</title>
+    <meta name="copyright" content="Dapha"/>
+    <meta name="author" content="Dapha"/>
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Dapha">
+    <script>
+        (function() {
+           window.onpageshow = function(event) {
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+           };
+        })();
+        </script>
     <!-- CSS file import -->
-    <link rel="stylesheet" href="css/libs/swiper.min-7.2.0.css" />
     <link rel="stylesheet" href="css/style.css" />
-
+    <link rel="canonical" href="http://daphavn.com/">
     <!-- Js file import -->
     <script src="js/libs/jquery-3.1.0.min.js"></script>
-    <script src="js/libs/swiper.min.js"></script>
 
 </head>
 
@@ -201,7 +216,7 @@
 
     </main>
 
-    <footer class="dapha-footer bg-dapha">
+    <footer class="dapha-footer bg-dapha relative">
         <div class="container">
             <div class="dapha-innner">
                 <div class="footer-group">
@@ -211,7 +226,7 @@
                         </picture>
                     </div>
                     <div class="footer-info">
-                        <div class="footer-info-name dapha-para">
+                        <div class="footer-info-name dapha-para font-utm f-w-500">
                             CÔNG TY CỔ PHẦN XÂY DỰNG VÀ THƯƠNG MẠI DAPHA
                         </div>
                         <div class="footer-address">
@@ -247,7 +262,7 @@
                                         <picture>
                                             <img src="images/footer/ic-call.png" alt="Điện Thoại">
                                         </picture>
-                                        <a href="tel:+84 989 890 684">+84 989 890 684</a>
+                                        <p>+84 989 890 684</p>
                                     </div>
                                 </li>
                                 <li class="address-item">
@@ -264,8 +279,13 @@
                 </div>
             </div>
         </div>
+        <div class="button-scroll js-scroll-top">
+            <div class="button-scroll-top">
+                <img src="images/Group.png" alt="Button">
+            </div>
+        </div>
     </footer>
-
+    <script src="js/fn-global.js"></script>
 </body>
 
 </html>

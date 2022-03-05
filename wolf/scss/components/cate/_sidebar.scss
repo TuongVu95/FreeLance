@@ -2,6 +2,6 @@ $border-bottom: .1rem solid $gray-300;
 .sidebar{
     &__panel{
         border-bottom: $border-bottom;
-        @extend .fs-p-16, .p-b-8;
+        @extend .fs-p-18, .p-b-8;
     }
 }

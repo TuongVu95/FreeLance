@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- CSS file import -->
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Js file import -->
     <script src="js/libs/jquery-3.1.0.min.js"></script>
@@ -36,27 +36,108 @@
                                     <div class="accordion-header">
                                         <button class="accordion-button">
                                             Color
-                                          </button>
+                                        </button>
+                                        <span class="ic-angle-down accordion-icon"></span>
                                     </div>
                                     <div class="accordion-collapse">
                                         <div class="accordion-body">
                                             <div class="filter__checkbox">
                                                 <div class="filter__checkbox-item">
-                                                    <label for="checkbox1" class="form-group">
-                                                        <input type="checkbox" class="form-input form-checkbox" id="checkbox1">
-                                                        <span class="label-text">Black</span>
-                                                        <span class="label-count">(2)</span>
-                                                    </label>
+                                                    <div class="checkbox checkbox-sm">
+                                                        <a href="">
+                                                            <input type="checkbox" id="check">
+                                                            <span class="label-text f-w-400">Lab Well</span>
+                                                            <span class="label-text label-count f-w-400">(2)</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="filter__checkbox-item">
+                                                    <div class="checkbox checkbox-sm">
+                                                        <a href="">
+                                                            <input type="checkbox" id="check">
+                                                            <span class="label-text f-w-400">Lab Well</span>
+                                                            <span class="label-text label-count f-w-400">(2)</span>
+                                                        </a>
+
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </li>
+
+                                <li class="accordion-item">
+                                    <div class="accordion-header">
+                                        <button class="accordion-button">
+                                            Color
+                                        </button>
+                                        <span class="ic-angle-down accordion-icon"></span>
+                                    </div>
+                                </li>
+                                <li class="accordion-item">
+                                    <div class="accordion-header">
+                                        <button class="accordion-button">
+                                            Color
+                                        </button>
+                                        <span class="ic-angle-down accordion-icon"></span>
+                                    </div>
+                                </li>
+                                <li class="accordion-item">
+                                    <div class="accordion-header">
+                                        <button class="accordion-button">
+                                            Color
+                                        </button>
+                                        <span class="ic-angle-down accordion-icon"></span>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-8">
-
+                        <div class="block__product">
+                            <div class="toolbar-sorter sorter">
+                                <label class="sorter-label" for="sorter">Sort By</label>
+                                <select id="sorter" data-role="sorter" class="sorter-options">
+                                    <option value="position" selected="selected">
+                                        Bestsellers </option>
+                                    <option value="name">
+                                        A - Z </option>
+                                    <option value="price_desc">
+                                        Price - High To Low </option>
+                                    <option value="price_asc">
+                                        Price - Low To High </option>
+                                </select>
+                                <a title="Set Descending Direction" href="#" class="action sorter-action sort-asc" data-role="direction-switcher" data-value="desc">
+                                    <span>Set Descending Direction</span>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="product product-wrap">
+                                        <a href="http://">
+                                            <picture class="product__picture">
+                                                <source media="(max-width: 768px)" srcset="">
+                                                <img src="https://via.placeholder.com/297x166" alt="Img">
+                                            </picture>
+                                        </a>
+                                        <div class="product__group">
+                                            <span class="product__cart">
+                                                <i class="ic-cart-2"></i>
+                                            </span>
+                                            <h3 class="product__name">
+                                                <a href="http://">
+                                                    WatchsWatchsWatchsWatchs
+                                                </a>
+                                            </h3>
+                                            <div class="product__price">
+                                                $200
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
