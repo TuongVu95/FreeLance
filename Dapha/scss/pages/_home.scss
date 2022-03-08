@@ -161,8 +161,11 @@ $background-wrap: #EDEEEF;
 .section-tabs-horizontal{
     padding: 24px 0 50px;
     overflow: hidden;
+    background: url(../images/home-cate/mask-cuoi.webp) no-repeat center $main-color;
+    background-size: 100% 100%;
     .tabs-item{
         &-name{
+            @extend .txt-center;
             margin-bottom: 16px;
             font-family: $font-SVN-AL, Arial, Helvetica, sans-serif;
         }
