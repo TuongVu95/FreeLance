@@ -38,6 +38,12 @@
                 font-size: 18px;
                 line-height: 24px;
             }
+            .line-left {
+                margin-left: auto;
+            }
+            .line-right {
+                margin: 12px auto 0 0;
+            }
         }
     }
     .dapha-section{
@@ -63,6 +69,9 @@
             color: #444B52;
             @extend .font-utm;
         }
+        @include respond-to('md'){
+            padding: 10px;
+        }
     }
     .col-reverse{
         &:first-child{
@@ -78,7 +87,12 @@
             margin: auto 0 auto auto;
         }
         @include respond-to('md'){
-
+            &:first-child{
+                order: 0;
+            }
+            .dapha-content{
+                padding: 10px;
+            }
         }
     }
     .line-right {
