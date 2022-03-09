@@ -44,8 +44,8 @@ $background-wrap: #EDEEEF;
     line-height: 21px;
     @include respond-to('md'){
         margin-bottom: calc(#{$spacing-para} / 2);
-        font-size: 14px;
-        line-height: 20px;
+        // font-size: 14px;
+        // line-height: 20px;
     }
 }
 
@@ -325,4 +325,7 @@ $background-wrap: #EDEEEF;
 
     max-width: 48px;
     cursor: pointer;
+    @include respond-to('md'){
+        display: none;
+    }
 }

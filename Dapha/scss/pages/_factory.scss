@@ -42,6 +42,12 @@
             flex: auto;
         }
     }
+    @include respond-to('md'){
+        padding: 32px 0;
+        .dapha-inner{
+            padding: 0;
+        }
+    }
 }
 
 .dapha-factory {
@@ -74,6 +80,21 @@
                 margin-top: -7px;
             }
         }
+        @include respond-to('md'){
+        padding: 32px 0;
+        .dapha-section2 {
+            padding: 18px 0 32px;
+        }
+        .para-normal {
+            picture {
+                width: 15px;
+            }
+            span{
+                margin-top: -4px;
+                flex: 1;
+            }
+        }
+        }
     }
 
     .section-cate{
@@ -91,8 +112,10 @@
         }
         .rs-col{
             padding: 0 32px;
+
         }
         .cate-item{
+            position: relative;
             picture,.para-normal{
                 margin-bottom: 16px;
             }
@@ -121,6 +144,40 @@
                 margin-top: 0;
                 padding: 4px 0;
             }
+            @include respond-to('md'){
+                background: transparent;
+                box-shadow: none;
+                flex-wrap: wrap;
+                width: 100%;
+                align-items: flex-start;
+                picture{
+                    position: absolute;
+                    left: 0;
+                    max-width: 120px;
+                    margin-bottom: 0;
+                }
+                &-content{
+                    flex: 1 100%;
+                    width: 100%;
+                    padding-left: 128px;
+                    order: 2;
+                }
+                .para-normal{
+                   font-size: 14px;
+                    line-height: 25px;
+                    margin-bottom: 0;
+                }
+                .btn-none-events{
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-top: 0;
+                    padding: 0 0 0 128px;
+                }
+            }
+        }
+        @include respond-to('md'){
+            margin-top: 0;
+            padding-top: 0;
         }
     }
 }

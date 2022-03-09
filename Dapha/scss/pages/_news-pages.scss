@@ -22,18 +22,32 @@
         flex-basis: 676px;
         padding: 0;
         margin-right: 24px;
+        @include respond-to("md") {
+            max-width: 100%;
+            flex-basis: 100%;
+
+        }
     }
     .reset-col-right {
         height: 100%;
         max-width: 261px;
         margin-left: 24px;
+        @include respond-to("md") {
+            max-width: 100%;
+            margin: 24px 0 0;
+        }
+    }
+    @include respond-to("md") {
+        padding: 32px 0;
+        .dapha-line-vertical{
+            display: none;
+        }
     }
 }
 .news-para {
-    &-title{
-        color: #3A4B00;
-
-text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+    &-title {
+        color: #3a4b00;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
     }
     .dapha-line {
         width: 118px;
@@ -41,11 +55,18 @@ text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
     .para-normal {
         color: #444b52;
         line-height: 24px;
+        @include respond-to('md'){
+            font-size: 16px;
+        }
     }
     .para-title {
         font-size: 20px;
         line-height: 28px;
         color: #212529;
+        @include respond-to('md'){
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
     .para-list {
         padding-left: 28px;
@@ -84,8 +105,8 @@ text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
     }
 }
 .news-item {
-    picture{
-        img{
+    picture {
+        img {
             border-radius: 4px;
         }
     }
@@ -109,6 +130,39 @@ text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
     .news-spacing {
         &:not(:last-child) {
             margin-bottom: 8px;
+        }
+    }
+    @include respond-to('md'){
+        display: flex;
+
+        picture{
+            width: 100px;
+            margin-right: 8px;
+        }
+        &-content{
+            flex: 1;
+        }
+        &-name, &-desc {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+        .news-spacing {
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+.news-list{
+    @include respond-to('md'){
+        &-title{
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 12px;
+            font-weight: bold;
         }
     }
 }
