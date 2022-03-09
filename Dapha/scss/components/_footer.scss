@@ -9,6 +9,9 @@ footer {
             @extend .txt-white;
         }
     }
+    @include respond-to('md'){
+        padding: 20px 0;
+    }
 }
 .footer{
     &-logo{
@@ -19,9 +22,18 @@ footer {
     &-group{
         display: flex;
         align-items: center;
+        @include respond-to('md'){
+            flex-direction: column;
+        }
     }
     &-logo{
         margin-right: 72px;
+        @include respond-to('md'){
+            margin-right: auto;
+            width: 100%;
+            max-width: 80px;
+            margin-bottom: 12px;
+        }
     }
     &-info {
         &-name {
@@ -30,6 +42,12 @@ footer {
             color: #e09826;
 
             @extend .font-Roboto;
+        }
+        @include respond-to('md'){
+            &-name {
+                font-size: 18px;
+                line-height: 24px;
+            }
         }
     }
 
@@ -40,6 +58,9 @@ footer {
         margin-top: 16px;
         ul:first-child{
             margin-right: 32px;
+        }
+        @include respond-to('md'){
+            display: block;
         }
     }
 }

@@ -3,9 +3,7 @@ $spacing-slide-x: 32px;
 
 $spacing-para: 24px;
 $background-wrap: #EDEEEF;
-.dapha-wrap{
-    background: #E5E5E5;
-}
+
 .section2{
     position: relative;
 
@@ -24,6 +22,10 @@ $background-wrap: #EDEEEF;
 .para-heading-36 {
     font-size: 36px;
     line-height: 51px;
+    @include respond-to('md'){
+        font-size: 24px;
+        line-height: 32px;
+    }
 }
 
 .dapha-line {
@@ -31,12 +33,20 @@ $background-wrap: #EDEEEF;
     height: 2px;
     background-color: $white;
     margin: $spacing-para 0;
+    @include respond-to('md'){
+        margin: calc(#{$spacing-para} / 2) 0;
+    }
 }
 
 .para-normal {
     margin-bottom: $spacing-para;
     font-size: 18px;
     line-height: 21px;
+    @include respond-to('md'){
+        margin-bottom: calc(#{$spacing-para} / 2);
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 .para-desc {
@@ -44,8 +54,12 @@ $background-wrap: #EDEEEF;
     line-height: 35px;
 }
 .dapha-wrap{
+    background: #E5E5E5;
     padding-bottom: 32px;
     // padding: 132px 0 32px 0;
+    @include respond-to('md'){
+        padding-bottom: 24px;
+    }
 }
 .dapha-section{
     &:not(:last-child){
@@ -77,6 +91,9 @@ $background-wrap: #EDEEEF;
         .para-normal {
             @extend .font-Roboto;
         }
+        @include respond-to('md'){
+            padding: 12px;
+        }
     }
     .col-8 {
         max-width: 756px;
@@ -91,6 +108,18 @@ $background-wrap: #EDEEEF;
         background-size: cover;
         padding: 100px 0 96px;
         height: auto;
+        @include respond-to('md'){
+            padding: 32px 0;
+            .col-md-12{
+                max-width: 100%;
+            }
+            .col-md-12:first-child{
+                order: 2;
+            }
+            .col-md-12:last-child{
+                order: 1;
+            }
+        }
     }
     .slide-2 {
         background: url(../images/nha-may-san-xuat/bg-section2.jpg) no-repeat center;
@@ -104,6 +133,13 @@ $background-wrap: #EDEEEF;
             line-height: 25px;
             margin-bottom: 20px;
             @extend .font-utm;
+        }
+        @include respond-to('md'){
+            padding-bottom: 32px;
+            height: auto;
+            .para-normal{
+                font-size: 18px;
+            }
         }
     }
     .box-group {
@@ -120,6 +156,26 @@ $background-wrap: #EDEEEF;
                 font-size: 18px;
                 line-height: 25px;
                 color: $black;
+            }
+        }
+        @include respond-to('md'){
+            padding: 10px;
+            .col{
+                &:not(:last-child){
+                    margin-bottom: 8px;
+                }
+            }
+            .box-item {
+                padding: 10px;
+                height: 100%;
+                > * {
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: $black;
+                }
+            }
+            .para-normal{
+                margin-bottom: 12px;
             }
         }
     }
@@ -155,7 +211,35 @@ $background-wrap: #EDEEEF;
 
         text-align: center;
     }
+    @include respond-to('md'){
+        .cate-item{
+            display: flex;
+            align-items: center;
+            background: #3a4b00;
+            margin-bottom: 20px;
+            box-shadow: 5px 4px 4px rgba(0,0,0,0.25);
+            border-radius: 6px;
+            picture{
+                max-width: 200px;
+            }
+            .btn-none-events{
+                box-shadow: none;
+                background: transparent;
+                padding: 0 0 0 8px;
 
+                margin-top: 0;
+            }
+        }
+        .btn-none-events{
+            font-size: 20px;
+            line-height: 26px;
+        }
+        .section2-btn{
+            .btn-none-events{
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 .section-tabs-horizontal{
@@ -199,7 +283,39 @@ $background-wrap: #EDEEEF;
             right: 103px;
         }
     }
+    @include respond-to('md'){
+        padding: 24px 0 20px;
+        .tabs-item{
+            display: flex;
+            margin-bottom: 12px;
+            &-name{
+                font-size: 22px;
+                line-height: 28px;
+                max-width: 118px;
+                width: 100%;
+                text-align: left !important;
+            }
+            &-content{
+                flex: 1;
+            }
+        }
+        .dapha-inner{
+            padding: 0;
+            .row{
+                padding: 0 10px;
+                margin: 0;
+            }
+            &::before, &:after{
 
+            }
+            &::before{
+                left: 0;
+            }
+            &:after{
+                right: 0;
+            }
+        }
+    }
 }
 .button-scroll{
     position: absolute;
