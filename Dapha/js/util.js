@@ -1,7 +1,7 @@
 // Utility function
 function Util() {}
 
-/* 
+/*
 	class manipulation functions
 */
 Util.hasClass = function(el, className) {
@@ -37,7 +37,7 @@ Util.setAttributes = function(el, attrs) {
 	}
 };
 
-/* 
+/*
   DOM manipulation
 */
 Util.getChildrenByClassName = function(el, className) {
@@ -67,7 +67,7 @@ Util.is = function(elem, selector) {
 	return false;
 };
 
-/* 
+/*
 	Animate height of an element
 */
 Util.setHeight = function(start, to, element, duration, cb) {
@@ -91,7 +91,7 @@ Util.setHeight = function(start, to, element, duration, cb) {
 	window.requestAnimationFrame(animateHeight);
 };
 
-/* 
+/*
 	Smooth Scroll
 */
 
@@ -115,7 +115,7 @@ Util.scrollTo = function(final, duration, cb) {
 	window.requestAnimationFrame(animateScroll);
 };
 
-/* 
+/*
   Focus utility classes
 */
 
@@ -129,7 +129,7 @@ Util.moveFocus = function(element) {
 	}
 };
 
-/* 
+/*
   Misc
 */
 
@@ -194,7 +194,7 @@ Util.osHasReducedMotion = function() {
 	return false; // return false if not supported
 };
 
-/* 
+/*
 	Polyfills
 */
 //Closest() method
@@ -228,7 +228,7 @@ if (typeof window.CustomEvent !== 'function') {
 	window.CustomEvent = CustomEvent;
 }
 
-/* 
+/*
 	Animation curves
 */
 Math.easeInOutQuad = function(t, b, c, d) {
@@ -265,3 +265,4 @@ Math.easeInOutQuad = function(t, b, c, d) {
 		window.addEventListener('mousedown', detectClick);
 	}
 })();
+
