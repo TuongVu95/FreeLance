@@ -9,6 +9,9 @@ $background-wrap: #EDEEEF;
 
     background: url(../images/mask.png) no-repeat center;
     background-size: 100% 120%;
+    @include respond-to('md'){
+        background-size: cover;
+    }
 }
 .bg-hat{
     background: url(../images/mask.png) no-repeat center;
@@ -108,6 +111,7 @@ $background-wrap: #EDEEEF;
         background-size: cover;
         padding: 100px 0 96px;
         height: auto;
+
         @include respond-to('md'){
             padding: 32px 0;
             .col-md-12{
@@ -118,6 +122,9 @@ $background-wrap: #EDEEEF;
             }
             .col-md-12:last-child{
                 order: 1;
+            }
+            picture{
+                @include aspect-ratio(508,566,0);
             }
         }
     }
@@ -184,6 +191,33 @@ $background-wrap: #EDEEEF;
         picture {
             max-width: 90px;
             margin-left: auto;
+        }
+    }
+    @include respond-to('md'){
+        .swiper{
+            padding-bottom: 18px;
+        }
+        .swiper-pagination{
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 4px;
+        }
+        .swiper-pagination-bullet{
+            opacity: 1;
+            width: 40px;
+            height: 4px;
+            background: #b6c0ce;
+            border-radius: 100px;
+            opacity: 1;
+            &:not(:last-child){
+                margin-right: 4px;
+            }
+            &-active{
+                background: #E09826;
+                border-color: #E09826;
+            }
         }
     }
 }
@@ -284,6 +318,7 @@ $background-wrap: #EDEEEF;
         }
     }
     @include respond-to('md'){
+        background-size: cover;
         padding: 24px 0 20px;
         .tabs-item{
             display: flex;
