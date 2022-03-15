@@ -110,6 +110,7 @@ $background-wrap: #EDEEEF;
     .slide-1 {
         background: url(../images/home-cate/bg-banner-home.webp) no-repeat center;
         background-size: cover;
+        background-attachment: fixed;
         padding: 100px 0 96px;
         height: auto;
 

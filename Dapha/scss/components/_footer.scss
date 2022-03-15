@@ -66,12 +66,11 @@ footer {
     }
 }
 .address-item{
+    margin-bottom: 8px;
     picture{
         max-width: 24px;
     }
-    &:not(:last-child){
-        margin-bottom: 8px;
-    }
+
     &:nth-child(1),
     &:nth-child(2){
         picture{
