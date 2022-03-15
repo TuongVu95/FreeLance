@@ -44,6 +44,7 @@ footer {
             @extend .font-Roboto;
         }
         @include respond-to('md'){
+            padding-right: 40px;
             &-name {
                 font-size: 18px;
                 line-height: 24px;
